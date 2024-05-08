@@ -1,0 +1,5 @@
+const goColor = "#08AFD8"
+const unityColor = "#080808"
+const vueColor = "#47BA87"
+const postgresColor = "#376695"
+const mySQLColor = "#E48A08"
