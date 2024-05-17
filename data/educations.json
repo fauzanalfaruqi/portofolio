@@ -1,0 +1,26 @@
+[
+    {
+      "id": "edu001",
+      "institution_name": "SMKN 4 Sukabumi City",
+      "major": "Motorcycle Automotive Engineering",
+      "start_at_year": "2012",
+      "end_at_year": "2015",
+      "education_details":
+      [
+        {
+          "id": "edud001",
+          "description": "Represented the school in the PMR competition"
+        },
+        {
+          "id": "edud002",
+          "description": "Represented the school in the English debate competition"
+        },
+        {
+          "id": "edud",
+          "description": "PMR Leader for the period 2013-2014"
+        }
+      ],
+      "created_at": "2024-05-03T15:27:23Z",
+      "updated_at": "2024-05-03T15:27:23Z"
+    }
+]

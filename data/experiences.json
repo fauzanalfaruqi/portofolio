@@ -1,0 +1,60 @@
+[
+    {
+        "id": "exp001",
+        "institution_name": "PT. Astra Honda Motor",
+        "role": "Production Operator",
+        "start_at_day": "01",
+        "start_at_month": "09",
+        "start_at_year": "2015",
+        "end_at_day": "01",
+        "end_at_month": "08",
+        "end_at_year": "2017",
+        "experience_details": 
+        [
+            {
+                "id": "expd001",
+                "description": "Operate varies machines, complete work orders in a timely accurate fashion, inspect parts & keep work area clean"
+            },
+            {
+                "id": "expd002",
+                "description": "Ability and willingness to work rotating shifts, including weekends and holidays"
+            },
+            {
+                "id": "expd003",
+                "description": "Conducting regular inspections of machinery and fixing issues in a timely manner to ensure that they run smoothly, avoiding unnecessary delays"
+            },
+            {
+                "id": "expd004",
+                "description": "Writing skills to communicate information to others and to input operations data into the computer"
+            }
+        ]
+    },
+    {
+        "id": "exp002",
+        "institution_name": "PT. Shibaura Shearing Indonesia",
+        "role": "Production Operator",
+        "start_at_month": "11",
+        "start_at_year": "2018",
+        "end_at_month": "09",
+        "end_at_year": "2019",
+        "experience_details": 
+        [
+            {
+                "id": "expd001",
+                "description": "Operate production equipment in a safe and effective manner while utilizing Standard Operating Procedures"
+            },
+            {
+                "id": "expd002",
+                "description": "Operate a crane to assist the production process"
+            },
+            {
+                "id": "expd003",
+                "description": "Conducting regular inspections of machinery and fixing issues in a timely manner to ensure that they run smoothly, avoiding unnecessary delays"
+            },
+            {
+                "id": "expd004",
+                "description": "Ability and willingness to work rotating shifts, including weekends and holidays. Works with a sense of urgency while maintaining quality and company safety standards"
+            }
+        ]
+    }
+]

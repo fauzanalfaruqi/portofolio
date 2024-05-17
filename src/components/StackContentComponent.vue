@@ -1,13 +1,16 @@
 <template>
     <div class="stack-content-container">
-        <img src="../assets/go-logo.png">
-        <p>Go</p>
+        <img :src="logoLink">
+        <p>{{ stackName }}</p>
     </div>
 </template>
 
 <script>
 export default {
-
+    props: {
+        logoLink: String,
+        stackName: String
+    }
 }
 </script>
 

@@ -65,9 +65,10 @@ export default {
 }
 
 .close-button {
-  color: #252525;
+  color: #ffffff;
   font-weight: 600;
-  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 24px;
   position: absolute;
   top: 10px;
   right: 10px;

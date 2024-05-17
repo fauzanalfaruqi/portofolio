@@ -13,9 +13,9 @@
           <button-component
             :style="'primary'"
             @click="showModal">Download CV</button-component>
-            <router-link to="/about">
+            <router-link to="/projects">
               <button-component
-                :style="'secondary'">See More About Me</button-component>
+                :style="'secondary'">See My Projects</button-component>
             </router-link>
         </div>
         <div class="right-content">
@@ -24,9 +24,13 @@
       </div>
       <modal-component
         :isOpen="modalIsOpen"
-        title="Download CV"
         @close="closeModal">
-          <p>Modal content!</p>
+        <download-cv-modal-component
+          :enigmaCVLink="'https://fa-portofolio.web.app/enigma_resume.pdf'"
+          :regularCVLink="'https://fa-portofolio.web.app/resume.pdf'"
+          :fileIconLink="'https://fa-portofolio.web.app/icons/pdf_icon.png'">
+
+        </download-cv-modal-component>
       </modal-component>
     </div>
   </template>
@@ -34,12 +38,14 @@
   <script>
   import ButtonComponent from '../components/ButtonComponent.vue'
   import ModalComponent from '../components/ModalComponent.vue'
+  import DownloadCvModalComponent from '../components/DownloadCVModalComponent.vue';
   
   export default {
 
     components: {
       ButtonComponent,
-      ModalComponent
+      ModalComponent,
+      DownloadCvModalComponent
     },
 
     data() {

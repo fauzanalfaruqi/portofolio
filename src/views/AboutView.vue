@@ -64,23 +64,17 @@
             <h1>Stacks I'm Familiar With</h1>
             <hr>
             <div id="stack-contents-container">
-                <stack-content-component/>
-                <stack-content-component/>
-                <stack-content-component/>
-                <stack-content-component/>
-                <stack-content-component/>
-                <stack-content-component/>
-                <stack-content-component/>
-                <stack-content-component/>
-                <stack-content-component/>
-                <stack-content-component/>
+                <stack-content-component
+                v-for="tag in tags"
+                :key="tag.id"
+                :logoLink="tag.logo_link"
+                :stackName="tag.name"/>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import axios from "axios";
 import TimelineComponent from '../components/TimelineComponent'
 import StackContentComponent from '../components/StackContentComponent'
 
@@ -90,6 +84,7 @@ export default {
             educations: [],
             experiences: [],
             nfEducations: [],
+            tags: []
         };
     },
 
@@ -97,6 +92,7 @@ export default {
         this.fetchEducationData();
         this.fetchExperienceData();
         this.fetchNfEducationData();
+        this.fetchTagData();
     },
 
     components: {
@@ -106,36 +102,19 @@ export default {
 
     methods: {
         fetchEducationData() {
-            axios.get("http://localhost:8081/api/v1/educations")
-                .then((res) => {
-                    this.educations = res.data.data;
-                    console.log(res.data.data);
-                })
-                .catch((err) => {
-                    console.error("Error while fetching education data: ", err)
-                });
+            this.educations = require("/data/educations.json");
         },
 
         fetchExperienceData() {
-            axios.get("http://localhost:8081/api/v1/experiences")
-                .then((res) => {
-                    this.experiences = res.data.data;
-                    console.log(res.data.data);
-                })
-                .catch((err) => {
-                    console.error("Error while fetching experience data: ", err)
-                });
+            this.experiences = require("/data/experiences.json");
         },
 
         fetchNfEducationData() {
-            axios.get("http://localhost:8081/api/v1/nf-educations")
-                .then((res) => {
-                    this.nfEducations = res.data.data;
-                    console.log(res.data.data);
-                })
-                .catch((err) => {
-                    console.error("Error while fetching non-formal education data: ", err)
-                });
+            this.nfEducations = require("/data/nf_educations.json");
+        },
+
+        fetchTagData() {
+            this.tags = require("/data/tags.json");
         }
     }
 }
@@ -146,10 +125,10 @@ export default {
 #stack-contents-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 #about-content {

@@ -1,0 +1,110 @@
+[
+    {
+      "id": "nfe001",
+      "institution_name": "Jabar Coding Camp",
+      "course": "Flutter",
+      "start_at_day": "23",
+      "start_at_month": "08",
+      "start_at_year": "2021",
+      "end_at_day": "28",
+      "end_at_month": "09",
+      "end_at_year": "2021",
+      "nf_education_details":
+      [
+        {
+          "id": "nfed001",
+          "description": "Git"
+        },
+        {
+          "id": "nfed002",
+          "description": "Basic Dart"
+        },
+        {
+          "id": "nfed003",
+          "description": "Figma"
+        },
+        {
+          "id": "nfed004",
+          "description": "Firebase"
+        },
+        {
+          "id": "nfed005",
+          "description": "Flutter"
+        }
+      ]
+    },
+    {
+      "id": "nfe002",
+      "institution_name": "Enigmacamp",
+      "course": "Go",
+      "start_at_day": "21",
+      "start_at_month": "02",
+      "start_at_year": "2024",
+      "end_at_day": "06",
+      "end_at_month": "03",
+      "end_at_year": "2024",
+      "nf_education_details":
+      [
+        {
+          "id": "nfed001",
+          "description": "Git"
+        },
+        {
+          "id": "nfed002",
+          "description": "Golang Fundamental"
+        },
+        {
+          "id": "nfed003",
+          "description": "RDBMS Fundamental"
+        },
+        {
+          "id": "nfed004",
+          "description": "Golang Coroutines"
+        },
+        {
+          "id": "nfed005",
+          "description": "Golang Database"
+        },
+        {
+          "id": "nfed006",
+          "description": "Backend Introduction"
+        },
+        {
+          "id": "nfed007",
+          "description": "Golang API"
+        },
+        {
+          "id": "nfed008",
+          "description": "SCRUM"
+        },
+        {
+          "id": "nfed009",
+          "description": "HTTP"
+        },
+        {
+          "id": "nfed010",
+          "description": "REST"
+        },
+        {
+          "id": "nfed011",
+          "description": "Gin Gonic"
+        },
+        {
+          "id": "nfed012",
+          "description": "Golang JWT"
+        },
+        {
+          "id": "nfed013",
+          "description": "Unit Test Using Testify"
+        },
+        {
+          "id": "nfed014",
+          "description": "Basic Linux"
+        },
+        {
+          "id": "nfed015",
+          "description": "Docker"
+        }
+      ]
+    }
+]

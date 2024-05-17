@@ -1,6 +1,6 @@
 <template>
     <div class="project-card">
-            <img src="../assets/stock-pic.jpg" alt="stock">
+            <img :src="imageLink" alt="project-card-pic">
             <div class="project-card-content">
                 <h3>{{ title }}</h3>
                 <p>{{ description }}</p>
@@ -33,13 +33,14 @@ export default {
     props: {
         title: String,
         description: String,
-        tags: Array
+        tags: Array,
+        imageLink: String
     },
 
     methods: {
         handleClick() {
             this.$emit("click");
-        }
+        },
     }
 }
 </script>

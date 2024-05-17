@@ -1,0 +1,126 @@
+[
+    {
+      "id": "p001",
+      "name": "Avenger Clinic",
+      "description": "Avenger Clinic is a backend clinic management system built using Go. This project was created during final project of the Go bootcamp at Enigmacamp. Implements clean architecture, the program can perform CRUD operations and Authorization using JWT.",
+      "repo_link": "https://github.com/fauzanalfaruqi/avenger-clinic/",
+      "image_link": "https://fa-portofolio.web.app/posters/avengerclinic_poster.png",
+      "project_tag": 
+      [
+        {
+          "id": "pt001",
+          "tag_name": "Go",
+          "tag_color": "#08AFD8"
+        },
+        {
+          "id": "pt002",
+          "tag_name": "PostgreSQL",
+          "tag_color": "#376695"
+        }
+      ]
+    },
+    {
+        "id": "p002",
+        "name": "Portofolio SPA",
+        "description": "This project is a single-page application (SPA) website, built using Vue.js, serves as my online resume and  showcases my personal projects. It utilizes GitHub Pages for deployment'",
+        "demo_link": "https://fauzanalfaruqi.github.io/portofolio/",
+        "repo_link": "https://github.com/fauzanalfaruqi/portofolio/",
+        "image_link": "https://fa-portofolio.web.app/posters/portofolio_poster.png",
+        "project_tag": 
+        [
+          {
+            "id": "pt001",
+            "tag_name": "Vue",
+            "tag_color": "#41B883"
+          }
+        ]
+      },
+    {
+      "id": "p003",
+      "name": "Moonwalker",
+      "description": "Moonwalker is 2D platformer infinite runner game built using Unity Engine. This game was created during Pizza Jam submission on Itch.io",
+      "demo_link": "https://efei.itch.io",
+      "image_link": "https://fa-portofolio.web.app/posters/moonwalker-logo.png",
+      "embed_code": "https://itch.io/embed-upload/9134904?color=ffffff",
+      "project_tag": [
+        {
+          "id": "pt001",
+          "tag_name": "Unity",
+          "tag_color": "#080808"
+        },
+        {
+          "id": "pt002",
+          "tag_name": "C#",
+          "tag_color": "#5835D2"
+        }
+      ]
+    },
+    {
+        "id": "p004",
+        "name": "Pie In The Sky",
+        "description": "Pie In The Sky is a 2D casual game made with Unity. This game is based on coding challenge made by Daniel Shiffman from The Coding Train. Challenge link: https://thecodingtrain.com/challenges/169-pi-in-the-sky",
+        "demo_link": "https://efei.itch.io",
+        "image_link": "https://fa-portofolio.web.app/posters/piinthesky_poster.png",
+        "embed_code": "https://itch.io/embed-upload/8976321?color=ffffff",
+        "project_tag": [
+          {
+            "id": "pt001",
+            "tag_name": "Unity",
+            "tag_color": "#080808"
+          },
+          {
+            "id": "pt002",
+            "tag_name": "C#",
+            "tag_color": "#5835D2"
+          }
+        ]
+    },
+    {
+        "id": "p005",
+        "name": "Throw Boll",
+        "description": "Throw Boll is a hyper-casual game created using the Unity engine. This game implements authentication and a leaderboard system using Firebase, ads using AdMob, and in-app purchases using Unity's built-in IAP package.",
+        "demo_link": "https://apkpure.com/a-game-for-you-to-feel-bored/com.MorbagStudio.ThrowBoll/",
+        "image_link": "https://fa-portofolio.web.app/posters/throwball_poster.png",
+        "project_tag": [
+          {
+            "id": "pt001",
+            "tag_name": "Unity",
+            "tag_color": "#080808"
+          },
+          {
+            "id": "pt002",
+            "tag_name": "Firebase",
+            "tag_color": "#F58613"
+          },
+          {
+            "id": "pt003",
+            "tag_name": "AdMob",
+            "tag_color": "#EA4335"
+          }
+        ]
+      },
+      {
+        "id": "p006",
+        "name": "Tetorisu",
+        "description": "Tetorisu is a casual puzzle game derived from the classic Tetris. Developed with the Unity Engine, this game features a leaderboard system implemented using PlayFab and includes ads via AdMob.",
+        "demo_link": "https://apkpure.com/tetorisu-block-puzzle-game/com.MorbagStudio.NewTetorisu",
+        "image_link": "https://fa-portofolio.web.app/posters/tetorisu_poster.png",
+        "project_tag": [
+          {
+            "id": "pt001",
+            "tag_name": "Unity",
+            "tag_color": "#080808"
+          },
+          {
+            "id": "pt002",
+            "tag_name": "PlayFab",
+            "tag_color": "#FF6D21"
+          },
+          {
+            "id": "pt003",
+            "tag_name": "AdMob",
+            "tag_color": "#EA4335"
+          }
+        ]
+      }
+]

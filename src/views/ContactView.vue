@@ -6,38 +6,50 @@
                 <h2>Contact</h2>
                 <ul>
                     <li>
-                        <img src="../assets/go-logo.png" alt="icon">
+                        <img src="../assets/icons/envelope_icon.png" alt="icon">
                         <p>Email:&nbsp;</p>
                         <a class="contact-link" href="mailto:fauzanalfaruqi@gmail.com">fauzanalfaruqi@gmail.com</a>
                     </li>
                     <li>
-                        <img src="../assets/go-logo.png" alt="icon">
+                        <img src="../assets/icons/linkedin_icon.png" alt="icon">
                         <p>LinkedIn:&nbsp;</p>
                         <a class="contact-link" href="https://linkedin.com/in/fauzanalfaruqi">linkedin.com/in/fauzanalfaruqi</a>
                     </li>
                     <li>
-                        <img src="../assets/go-logo.png" alt="icon">
+                        <img src="../assets/icons/phone_icon.png" alt="icon">
                         <p>Phone/WhatsApp:&nbsp;</p>
                         <a class="contact-link" href="https://wa.me/62895411396153">+62895411396153</a>
                     </li>
                 </ul>
                 <div id="sm-logo-links">
-                    <img class="sm-logo-link" src="../assets/go-logo.png" alt="ppp">
-                    <img class="sm-logo-link" src="../assets/pin-map-logo.png" alt="dddd">
-                    <img class="sm-logo-link" src="../assets/profile.png" alt="dsds">
-                    <img class="sm-logo-link" src="../assets/stock-pic.jpg" alt="werer">
+                    <a href="https://t.me/fauzanalfaruqi/" target="_blank"> <img class="sm-logo-link" src="../assets/icons/telegram_icon.png" alt="telegram"> </a>
+                    <a href="https://github.com/fauzanalfaruqi" target="_blank"> <img class="sm-logo-link" src="../assets/icons/github_icon.png" alt="github"> </a>
+                    <a href="https://gitlab.com/fauzanalfaruqi" target="_blank"> <img class="sm-logo-link" src="../assets/icons/gitlab_icon.png" alt="gitlab"> </a>
+                    <a href="https://efei.itch.io" target="_blank"> <img class="sm-logo-link" src="../assets/icons/itch_icon.png" alt="itch.io"> </a>
+                    <a href="https://play.unity.com/u/fauzanalfaruqi" target="_blank"> <img class="sm-logo-link" src="../assets/icons/unity_icon.png" alt="unity-play"> </a>
+                    <a href="https://www.freelancer.com/u/fauzanalfaruqi" target="_blank"> <img class="sm-logo-link" src="../assets/icons/freelancer_icon.png" alt="freelancer"> </a>
+                    <a href="https://projects.co.id/public/browse_users/view/ebaa22/fauzanalfaruqi" target="_blank"> <img class="sm-logo-link" src="../assets/icons/projectsid_icon.png" alt="projects.co,id"> </a>
                 </div>
             </div>
         </div>
         <div class="right-content">
             <span id="right-content-components">
                 <h2>Send Message</h2>
-                <form action="">
-                    <label for="name-input">Name:</label><br>
-                    <input type="text" id="name-input" name="name-input"><br>
-                    <label for="message-input">Message:</label><br>
-                    <textarea id="message-input" name="message-input"></textarea><br>
-                    <button id="submit-button" type="submit">Submit</button>
+                <form
+                    id="contact-form"
+                    @submit.prevent="handleSubmit"
+                    action="https://formspree.io/f/mjvnzavp"
+                    method="POST">
+                    <label for="email">Email: <br>
+                        <input type="email" id="email" v-model="email" name="email" :disabled="sending"><br>
+                    </label>
+                    <label for="message">Message: <br>
+                        <textarea id="message" v-model="message" name="message" :disabled="sending">
+                        </textarea><br>
+                    </label>
+                    <button id="submit-button" type="submit" :disabled="sending">
+                        {{ sending ? 'Sending...' : 'Submit Message' }}
+                    </button>
                 </form>
             </span>
         </div>
@@ -46,6 +58,49 @@
 </template>
 
 <script>
+
+export default {
+    data() {
+        return {
+            email: '',
+            message: '',
+            sending: false
+        };
+    },
+
+    methods: {
+        async handleSubmit() {
+            this.sending = true;
+
+            try {
+                const res = await fetch('https://formspree.io/f/mjvnzavp', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: this.email,
+                        message: this.message
+                    })
+                });
+    
+                if (res.ok) {
+                    alert('Message sent successfully!');
+                    this.email = '';
+                    this.message = '';
+                } else {
+                    const data = await res.json();
+                    alert(data.error || 'There was a problem when submitting the form');
+                }
+            } catch (err) {
+                console.error('Error submitting form: ', err);
+                alert('There was a problem when submitting the form');
+            } finally {
+                this.sending = false;
+            }
+        }
+    }
+}
 
 </script>
 
@@ -88,8 +143,8 @@ h2 {
 }
 
 .left-content li img {
-    width: 25px;
-    height: 25px;
+    width: 16px;
+    height: 16px;
     margin-right: 10px;
 }
 
@@ -102,17 +157,18 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 27px;
 }
 
 .sm-logo-link {
-    width: 50px;
-    height:50px;
+    width: 28px;
+    height:28px;
 }
 
 .sm-logo-link:hover {
     cursor: pointer;
-    background-color: #2ab179;
+    filter: brightness(1.25);
+    transform: scale(1.1);
 }
 
 .right-content {
@@ -127,7 +183,7 @@ label {
     color: #5A5A5A;
 }
 
-input[type=text] {
+input[type=email] {
     border: solid #3F94A7 2px;
     border-radius: 10px;
     width: 70vh;

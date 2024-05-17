@@ -1,0 +1,152 @@
+[
+    {
+      "id": "t001",
+      "name": "Go",
+      "color": "#08AFD8",
+      "logo_link": "https://fa-portofolio.web.app/logos/gopher_logo.png"
+    },
+    {
+      "id": "t002",
+      "name": "PostgreSQL",
+      "color": "#376695",
+      "logo_link": "https://fa-portofolio.web.app/logos/postgres_logo.png"
+    },
+    {
+        "id": "t003",
+        "name": "MySQL",
+        "color": "#F29111",
+        "logo_link": "https://fa-portofolio.web.app/logos/mysql_logo.png"
+    },
+    {
+      "id": "t004",
+      "name": "Firebase",
+      "color": "#F58613",
+      "logo_link": "https://fa-portofolio.web.app/logos/firebase_logo.png"
+    },
+    {
+        "id": "t005",
+        "name": "PlayFab",
+        "color": "#FF6D21",
+        "logo_link": "https://fa-portofolio.web.app/logos/playfab_logo.png"
+    },
+    {
+        "id": "t006",
+        "name": "NodeJS",
+        "color": "#3E863D",
+        "logo_link": "https://fa-portofolio.web.app/logos/nodejs_logo.png"
+    },
+    {
+        "id": "t007",
+        "name": "JavaScript",
+        "color": "#F2DB1C",
+        "logo_link": "https://fa-portofolio.web.app/logos/javascript_logo.png"
+    },
+    {
+        "id": "t008",
+        "name": "Vue",
+        "color": "#41B883",
+        "logo_link": "https://fa-portofolio.web.app/logos/vue_logo.png"
+    },
+    {
+        "id": "t009",
+        "name": "p5.js",
+        "color": "#ED225D",
+        "logo_link": "https://fa-portofolio.web.app/logos/p5js_logo.png"
+    },
+    {
+        "id": "t010",
+        "name": "Flutter",
+        "color": "#1FBCFD",
+        "logo_link": "https://fa-portofolio.web.app/logos/flutter_logo.png"
+    },
+    {
+        "id": "t011",
+        "name": "Dart",
+        "color": "#03589C",
+        "logo_link": "https://fa-portofolio.web.app/logos/dart_logo.png"
+    },
+    {
+        "id": "t012",
+        "name": "Dotnet",
+        "color": "#512BD4",
+        "logo_link": "https://fa-portofolio.web.app/logos/dotnet_logo.png"
+    },
+    {
+        "id": "t013",
+        "name": "C#",
+        "color": "#5835D2",
+        "logo_link": "https://fa-portofolio.web.app/logos/csharp_logo.png"
+    },
+    {
+        "id": "t014",
+        "name": "Unity",
+        "color": "#080808",
+        "logo_link": "https://fa-portofolio.web.app/logos/unity_logo.png"
+    },
+    {
+        "id": "t015",
+        "name": "LÖVE",
+        "color": "#EA316E",
+        "logo_link": "https://fa-portofolio.web.app/logos/love2d_logo.png"
+    },
+    {
+        "id": "t016",
+        "name": "Lua",
+        "color": "#000080",
+        "logo_link": "https://fa-portofolio.web.app/logos/lua_logo.png"
+    },
+    {
+        "id": "t017",
+        "name": "Git",
+        "color": "#F05133",
+        "logo_link": "https://fa-portofolio.web.app/logos/git_logo.png"
+    },
+    {
+        "id": "t018",
+        "name": "GitHub",
+        "color": "#000000",
+        "logo_link": "https://fa-portofolio.web.app/logos/github_logo.png"
+    },
+    {
+        "id": "t019",
+        "name": "Gitlab",
+        "color": "#E24329",
+        "logo_link": "https://fa-portofolio.web.app/logos/gitlab_logo.png"
+    },
+    {
+        "id": "t020",
+        "name": "WordPress",
+        "color": "#464342",
+        "logo_link": "https://fa-portofolio.web.app/logos/wordpress_logo.png"
+    },
+    {
+        "id": "t021",
+        "name": "PHP",
+        "color": "#777BB3",
+        "logo_link": "https://fa-portofolio.web.app/logos/php_logo.png"
+    },
+    {
+        "id": "t022",
+        "name": "Docker",
+        "color": "#0DB7ED",
+        "logo_link": "https://fa-portofolio.web.app/logos/docker_logo.png"
+    },
+    {
+        "id": "t023",
+        "name": "AdMob",
+        "color": "#EA4335",
+        "logo_link": "https://fa-portofolio.web.app/logos/admob_logo.png"
+    },
+    {
+        "id": "t024",
+        "name": "Pyhton",
+        "color": "#FFD43B",
+        "logo_link": "https://fa-portofolio.web.app/logos/python_logo.png"
+    },
+    {
+        "id": "t025",
+        "name": "Figma",
+        "color": "#A259FF",
+        "logo_link": "https://fa-portofolio.web.app/logos/figma_logo.png"
+    }
+]

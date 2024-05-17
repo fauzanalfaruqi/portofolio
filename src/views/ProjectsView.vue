@@ -10,10 +10,11 @@
             <project-content-component
                 v-for="project in projects"
                 :key="project.id"
+                :imageLink="project.image_link"
                 :title="project.name"
                 :description="truncateString(project.description)"
                 :tags="project.project_tag"
-                @click="showModal(project.embed_code, project.name, project.repo_link, project.demo_link, project.description)"/>
+                @click="showModal(project.embed_code, project.name, project.repo_link, project.demo_link, project.description, project.image_link, project.project_tag)"/>
         </div>
         <modal-component
             :isOpen="modalIsOpen"
@@ -22,7 +23,8 @@
                 :projectName="modalProjectName"
                 :repoLink="modalRepoLink"
                 :demoLink="modalDemoLink"
-                :description="modalDescription">
+                :description="modalDescription"
+                :tags="modalTags">
                 <template
                     v-if="modalEmbedLink">
                     <iframe
@@ -34,7 +36,7 @@
                     </iframe>
                 </template>
                 <template v-else>
-                    <img src="../assets/stock-pic.jpg" alt="Project image">
+                    <img :src="modalImageLink" alt="Project image">
                 </template>
             </project-modal-content-component>
         </modal-component>
@@ -42,7 +44,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 import ProjectContentComponent from '../components/ProjectContentComponent.vue';
 // import DropdownComponent from '../components/DropdownComponent.vue';
 import ModalComponent from '../components/ModalComponent.vue'
@@ -65,7 +66,9 @@ export default {
             modalProjectName: "",
             modalRepoLink: "",
             modalDemoLink: "",
-            modalDescription: ""
+            modalDescription: "",
+            modalImageLink: "",
+            modalTags: []
         };
     },
 
@@ -75,32 +78,19 @@ export default {
 
     methods: {
         fetchProjectData() {
-            axios.get("http://localhost:8081/api/v1/projects")
-                .then((res) => {
-                    this.projects = res.data.data;
-                    console.log(res.data.data);
-                })
-                .catch((err) => {
-                    console.error("Error while fetching project data: ", err)
-                });
+            this.projects = require("/data/projects.json")
         },
 
-        showModal(embedLink, name, repoLink, demoLink, description) {
+        showModal(embedLink, name, repoLink, demoLink, description, imageLink, tags) {
             this.modalEmbedLink = embedLink;
             this.modalProjectName = name;
             this.modalDescription = description;
+            this.modalImageLink = imageLink;
 
-            if (repoLink && repoLink.trim() !== "") {
-                this.modalRepoLink = "Repo link: " + repoLink;
-            } else {
-                this.modalRepoLink = "";
-            }
+            this.modalRepoLink = repoLink && repoLink.trim() !== "" ? repoLink : "";
+            this.modalDemoLink = demoLink && demoLink.trim() !== "" ? demoLink : "";
 
-            if (demoLink && demoLink.trim() !== "") {
-                this.modalDemoLink = "Demo link: " + demoLink;
-            } else {
-                this.modalDemoLink = "";
-            }
+            this.modalTags = tags;
             
             this.modalIsOpen = true;
         },
@@ -109,11 +99,11 @@ export default {
             this.modalIsOpen = false;
         },
 
-        truncateString(description) {
-            if (description.length > 115) {
-                return description.substring(0, 112) + "...";
+        truncateString(str) {
+            if (str && str.length > 115) {
+                return str.substring(0, 112) + "...";
             } else {
-                return description
+                return str
             }
         }
     }
