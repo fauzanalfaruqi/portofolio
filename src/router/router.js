@@ -9,7 +9,7 @@ import FooterComponent from '../components/FooterComponent.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/portofolio',
     name: 'Home',
     components: {
         default: HomeView,
