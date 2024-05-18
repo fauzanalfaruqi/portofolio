@@ -9,7 +9,7 @@ import FooterComponent from '../components/FooterComponent.vue'
 
 const routes = [
   {
-    path: '/portofolio',
+    path: '/',
     name: 'Home',
     components: {
         default: HomeView,
@@ -48,6 +48,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
+  base: '/portofolio/',
   routes
 });
 

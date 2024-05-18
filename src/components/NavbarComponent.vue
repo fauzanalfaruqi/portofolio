@@ -1,7 +1,7 @@
 <template>
     <div class="navbar">
         <div class="nav-container">
-            <router-link :class="{'active-nav-link': $route.path === '/portofolio', 'nav-link': $route.path !== '/portofolio'}" to="/portofolio">Home</router-link>
+            <router-link :class="{'active-nav-link': $route.path === '/', 'nav-link': $route.path !== '/'}" to="/">Home</router-link>
             <router-link :class="{'active-nav-link': $route.path === '/about', 'nav-link': $route.path !== '/about'}" to="/about">About</router-link>
             <router-link :class="{'active-nav-link': $route.path === '/projects', 'nav-link': $route.path !== '/projects'}" to="/projects">Projects</router-link>
             <router-link :class="{'active-nav-link': $route.path === '/contact', 'nav-link': $route.path !== '/contact'}" to="/contact">Contact</router-link>
