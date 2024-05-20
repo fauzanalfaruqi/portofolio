@@ -22,7 +22,7 @@
     {
         "id": "p002",
         "name": "Portofolio SPA",
-        "description": "This project is a single-page application (SPA) website, built using Vue.js, serves as my online resume and  showcases my personal projects. It utilizes GitHub Pages for deployment'",
+        "description": "This project is a single-page application (SPA) website built using Vue.js. It serves as my online resume and showcases my personal projects. The website utilizes GitHub Pages for deployment and Firebase to host static files.'",
         "demo_link": "https://fauzanalfaruqi.github.io/portofolio/",
         "repo_link": "https://github.com/fauzanalfaruqi/portofolio/",
         "image_link": "https://fa-portofolio.web.app/posters/portofolio_poster.png",
@@ -32,6 +32,11 @@
             "id": "pt001",
             "tag_name": "Vue",
             "tag_color": "#41B883"
+          },
+          {
+            "id": "pt002",
+            "tag_name": "Firebase",
+            "tag_color": "#F58613"
           }
         ]
       },
