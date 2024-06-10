@@ -1,8 +1,8 @@
 [
     {
       "id": "p001",
-      "name": "Avenger Clinic",
-      "description": "Avenger Clinic is a backend clinic management system built using Go. This project was created during final project of the Go bootcamp at Enigmacamp. Implements clean architecture, the program can perform CRUD operations and Authorization using JWT.",
+      "name": "E-Clinic",
+      "description": "E-Clinic is a clinic management system API built using Go. This project was created during final project of the Go bootcamp at Enigmacamp. Implements clean architecture, the program can perform CRUD operations and Authorization using JWT.",
       "repo_link": "https://github.com/fauzanalfaruqi/avenger-clinic/",
       "image_link": "https://fa-portofolio.web.app/posters/avenger-clinic-poster.png",
       "project_tag": 
