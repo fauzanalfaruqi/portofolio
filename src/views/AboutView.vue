@@ -60,7 +60,7 @@
                 </timeline-component>
             </div>
         </div>
-        <div id="tech-stacks">
+        <!-- <div id="tech-stacks">
             <h1>Stacks I'm Familiar With</h1>
             <hr>
             <div id="stack-contents-container">
@@ -70,13 +70,13 @@
                 :logoLink="tag.logo_link"
                 :stackName="tag.name"/>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 
 <script>
 import TimelineComponent from '../components/TimelineComponent'
-import StackContentComponent from '../components/StackContentComponent'
+// import StackContentComponent from '../components/StackContentComponent'
 
 export default {
     data() {
@@ -97,7 +97,7 @@ export default {
 
     components: {
         TimelineComponent,
-        StackContentComponent
+        // StackContentComponent
     },
 
     methods: {
