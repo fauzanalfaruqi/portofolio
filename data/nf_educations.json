@@ -51,7 +51,7 @@
         },
         {
           "id": "nfed002",
-          "description": "Golang Fundamental"
+          "description": "Go"
         },
         {
           "id": "nfed003",
@@ -59,50 +59,18 @@
         },
         {
           "id": "nfed004",
-          "description": "Golang Coroutines"
+          "description": "PostgreSQL"
         },
         {
           "id": "nfed005",
-          "description": "Golang Database"
-        },
-        {
-          "id": "nfed006",
-          "description": "Backend Introduction"
-        },
-        {
-          "id": "nfed007",
-          "description": "Golang API"
-        },
-        {
-          "id": "nfed008",
           "description": "SCRUM"
         },
         {
-          "id": "nfed009",
-          "description": "HTTP"
-        },
-        {
-          "id": "nfed010",
-          "description": "REST"
-        },
-        {
-          "id": "nfed011",
-          "description": "Gin Gonic"
-        },
-        {
-          "id": "nfed012",
-          "description": "Golang JWT"
-        },
-        {
-          "id": "nfed013",
+          "id": "nfed006",
           "description": "Unit Test Using Testify"
         },
         {
-          "id": "nfed014",
-          "description": "Basic Linux"
-        },
-        {
-          "id": "nfed015",
+          "id": "nfed007",
           "description": "Docker"
         }
       ]

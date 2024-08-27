@@ -8,7 +8,7 @@
                     v-for="education in educations"
                     :key="education.id"
                     :institution="education.institution_name"
-                    :year="education.start_at_year + '-' + education.end_at_year"
+                    :year="formattedYear(education.start_at_month, education.start_at_year, education.end_at_month, education.end_at_year)"
                     :timelineTag="education.major">
                     <ul>
                         <li
@@ -20,6 +20,7 @@
                 </timeline-component>
             </div>
         </div>
+
         <div id="experience-timeline">
             <h1 class="text-my-header text-[32px] font-semibold">Experience</h1>
             <hr>
@@ -28,7 +29,7 @@
                     v-for="experience in experiences"
                     :key="experience.id"
                     :institution="experience.institution_name"
-                    :year="experience.start_at_year + '-' + experience.end_at_year"
+                    :year="formattedYear(experience.start_at_month, experience.start_at_year, experience.end_at_month, experience.end_at_year)"
                     :timelineTag="experience.role">
                     <ul>
                         <li
@@ -40,6 +41,7 @@
                 </timeline-component>
             </div>
         </div>
+
         <div id="experience-timeline">
             <h1 class="text-my-header text-[32px] font-semibold">Non-formal Education</h1>
             <hr>
@@ -48,7 +50,7 @@
                     v-for="nfEducation in nfEducations"
                     :key="nfEducation.id"
                     :institution="nfEducation.institution_name"
-                    :year="nfEducation.start_at_year"
+                    :year="formattedYear(nfEducation.start_at_month, nfEducation.start_at_year, nfEducation.end_at_month, nfEducation.end_at_year)"
                     :timelineTag="nfEducation.course">
                     <ul>
                         <li
@@ -115,6 +117,17 @@ export default {
 
         fetchTagData() {
             this.tags = require("/data/tags.json");
+        },
+
+        getMonthName(monthNumber) {
+            const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            return months[parseInt(monthNumber) - 1];
+        },
+
+        formattedYear(startMonth, startYear, endMonth, endYear) {
+            const startMonthName = this.getMonthName(startMonth);
+            const endMonthName = this.getMonthName(endMonth);
+            return `${startMonthName} ${startYear} - ${endMonthName} ${endYear}`;
         }
     }
 }
