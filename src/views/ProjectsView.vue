@@ -14,7 +14,7 @@
                 :title="truncateString(project.name, 15)"
                 :description="truncateString(project.description, 85)"
                 :tags="project.project_tag"
-                @click="showModal(project.embed_code, project.name, project.repo_link, project.demo_link, project.description, project.image_link, project.project_tag)"/>
+                @click="showModal(project.embed_code, project.name, project.repo_link, project.deploy_link, project.be_deploy_link, project.fe_deploy_link, project.description, project.image_link, project.project_tag)"/>
         </div>
         <modal-component
             :isOpen="modalIsOpen"
@@ -22,7 +22,9 @@
             <project-modal-content-component
                 :projectName="modalProjectName"
                 :repoLink="modalRepoLink"
-                :demoLink="modalDemoLink"
+                :deployLink="modalDeployLink"
+                :beDeployLink="modalBELink"
+                :feDeployLink="modalFELink"
                 :description="modalDescription"
                 :tags="modalTags">
                 <template
@@ -65,7 +67,9 @@ export default {
             modalEmbedLink: "",
             modalProjectName: "",
             modalRepoLink: "",
-            modalDemoLink: "",
+            modalDeployLink: "",
+            modalBELink: "",
+            modalFELink: "",
             modalDescription: "",
             modalImageLink: "",
             modalTags: []
@@ -81,14 +85,16 @@ export default {
             this.projects = require("/data/projects.json")
         },
 
-        showModal(embedLink, name, repoLink, demoLink, description, imageLink, tags) {
+        showModal(embedLink, name, repoLink, demoLink, beLink, feLink, description, imageLink, tags) {
             this.modalEmbedLink = embedLink;
             this.modalProjectName = name;
             this.modalDescription = description;
             this.modalImageLink = imageLink;
 
             this.modalRepoLink = repoLink && repoLink.trim() !== "" ? repoLink : "";
-            this.modalDemoLink = demoLink && demoLink.trim() !== "" ? demoLink : "";
+            this.modalDeployLink = demoLink && demoLink.trim() !== "" ? demoLink : "";
+            this.modalBELink = beLink && beLink.trim() !== "" ? beLink : "";
+            this.modalFELink = feLink && feLink.trim() !== "" ? feLink : "";
 
             this.modalTags = tags;
             

@@ -2,9 +2,9 @@
     <div class="navbar pt-[10px]">
         <div class="flex flex-row items-center justify-end max-w-screen-xl px-4 mx-auto sm:px-6">
             <router-link :class="{'active-nav-link': $route.path === '/portofolio', 'nav-link': $route.path !== '/portofolio'}" to="/portofolio">Home</router-link>
-            <router-link :class="{'active-nav-link': $route.path === '/about', 'nav-link': $route.path !== '/about'}" to="/about">About</router-link>
-            <router-link :class="{'active-nav-link': $route.path === '/projects', 'nav-link': $route.path !== '/projects'}" to="/projects">Projects</router-link>
-            <router-link :class="{'active-nav-link': $route.path === '/contact', 'nav-link': $route.path !== '/contact'}" to="/contact">Contact</router-link>
+            <router-link :class="{'active-nav-link': $route.path === '/portofolio/about', 'nav-link': $route.path !== '/portofolio/about'}" to="/portofolio/about">About</router-link>
+            <router-link :class="{'active-nav-link': $route.path === '/portofolio/projects', 'nav-link': $route.path !== '/portofolio/projects'}" to="/portofolio/projects">Projects</router-link>
+            <router-link :class="{'active-nav-link': $route.path === '/portofolio/contact', 'nav-link': $route.path !== '/portofolio/contact'}" to="/portofolio/contact">Contact</router-link>
         </div>
         <hr>
     </div>

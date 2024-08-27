@@ -3,20 +3,47 @@
         <slot></slot>
         <h2 class="font-bold text-[32px] mx-2 my-2 text-my-header">{{ projectName }}</h2>
         <hr>
-        <p v-if="repoLink">Repository link: <a :href="repoLink" target="_blank">{{ repoLink }}</a></p>
-        <p v-if="demoLink">Demo link: <a :href="demoLink" target="_blank">{{ demoLink }}</a></p>
-        <p>{{ description }}</p>
+        <p>
+            <span class="font-semibold text-my-header">Description: </span>
+            <br />
+            {{ description }}
+        </p>
+
+        <p v-if="repoLink">
+            <span class="font-semibold text-my-header">Project repository: </span>
+            <a :href="repoLink" target="_blank">
+                {{ repoLink }}
+            </a>
+        </p>
+
+        <p v-if="deployLink">
+            <span class="font-semibold text-my-header">Project deployment: </span>
+            <a :href="deployLink" target="_blank">
+                {{ deployLink }}
+            </a>
+        </p>
+
+        <p v-if="beDeployLink">
+            <span class="font-semibold text-my-header">Backend deployment: </span>
+            <a :href="beDeployLink" target="_blank">
+                {{ beDeployLink }}
+            </a>
+        </p>
+
+        <p v-if="feDeployLink">
+            <span class="font-semibold text-my-header">Frontent deployment: </span>
+            <a :href="feDeployLink" target="_blank">
+                {{ feDeployLink }}
+            </a>
+        </p>
+
         <div class="tags">
             <div class="content-tags">
-                <div
-                    class="project-content-tag"
-                    v-for="(tag, index) in tags"
-                    :key="index">
-                    <span
-                        class="inline-block rounded-md px-3 py-1 text-[0.65rem] font-medium mr-2 mb-2 text-white"
+                <div class="project-content-tag" v-for="(tag, index) in tags" :key="index">
+                    <span class="inline-block rounded-md px-3 py-1 text-[0.65rem] font-medium mr-2 mb-2 text-white"
                         :style="{ backgroundColor: tag.tag_color }">
                         {{ tag.tag_name }}
-            </span>
+                    </span>
                 </div>
             </div>
         </div>
@@ -28,7 +55,9 @@ export default {
     props: {
         projectName: String,
         repoLink: String,
-        demoLink: String,
+        deployLink: String,
+        beDeployLink: String,
+        feDeployLink: String,
         description: String,
         tags: Array,
     }
@@ -47,11 +76,11 @@ p {
 }
 
 a {
-  color: #3F94A7;
+    color: #3F94A7;
 }
 
 a:hover {
-  color: #2ab179;
+    color: #2ab179;
 }
 
 hr {
@@ -82,4 +111,19 @@ hr {
     margin: 0 5px;
 }
 
+.project-modal-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.project-modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.project-modal-content::-webkit-scrollbar-thumb {
+    background: #3F94A7;
+}
+
+.project-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #2ab179;
+}
 </style>

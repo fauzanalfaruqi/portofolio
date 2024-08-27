@@ -18,7 +18,7 @@ const routes = [
     }
   },
   {
-    path: '/about',
+    path: '/portofolio/about',
     name: 'About',
     components: {
         default: AboutView,
@@ -27,7 +27,7 @@ const routes = [
     }
   },
   {
-    path: '/projects',
+    path: '/portofolio/projects',
     name: 'Projects',
     components: {
         default: ProjectsView,
@@ -36,7 +36,7 @@ const routes = [
     }
   },
   {
-    path: '/contact',
+    path: '/portofolio/contact',
     name: 'Contact',
     components: {
         default: ContactView,
