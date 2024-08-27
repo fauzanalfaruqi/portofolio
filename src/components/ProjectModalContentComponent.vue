@@ -4,34 +4,39 @@
         <h2 class="font-bold text-[32px] mx-2 my-2 text-my-header">{{ projectName }}</h2>
         <hr>
         <p>
-            <span class="font-semibold text-my-header">Description: </span>
+            <span class="font-bold text-my-header">Description: </span>
             <br />
             {{ description }}
         </p>
 
+        <p>
+            <span class="font-bold text-my-header">Project type: </span>
+            {{ projectType }}
+        </p>
+
         <p v-if="repoLink">
-            <span class="font-semibold text-my-header">Project repository: </span>
+            <span class="font-bold text-my-header">Project repository: </span>
             <a :href="repoLink" target="_blank">
                 {{ repoLink }}
             </a>
         </p>
 
         <p v-if="deployLink">
-            <span class="font-semibold text-my-header">Project deployment: </span>
+            <span class="font-bold text-my-header">Project deployment: </span>
             <a :href="deployLink" target="_blank">
                 {{ deployLink }}
             </a>
         </p>
 
         <p v-if="beDeployLink">
-            <span class="font-semibold text-my-header">Backend deployment: </span>
+            <span class="font-bold text-my-header">Backend deployment: </span>
             <a :href="beDeployLink" target="_blank">
                 {{ beDeployLink }}
             </a>
         </p>
 
         <p v-if="feDeployLink">
-            <span class="font-semibold text-my-header">Frontent deployment: </span>
+            <span class="font-bold text-my-header">Frontent deployment: </span>
             <a :href="feDeployLink" target="_blank">
                 {{ feDeployLink }}
             </a>
@@ -54,6 +59,7 @@
 export default {
     props: {
         projectName: String,
+        projectType: String,
         repoLink: String,
         deployLink: String,
         beDeployLink: String,

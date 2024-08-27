@@ -10,17 +10,18 @@
             <project-content-component
                 v-for="project in projects"
                 :key="project.id"
-                :imageLink="project.image_link"
+                :imageLink="project.thumbnail_link && project.thumbnail_link.trim() !== '' ? project.thumbnail_link : project.image_link"
                 :title="truncateString(project.name, 15)"
                 :description="truncateString(project.description, 85)"
                 :tags="project.project_tag"
-                @click="showModal(project.embed_code, project.name, project.repo_link, project.deploy_link, project.be_deploy_link, project.fe_deploy_link, project.description, project.image_link, project.project_tag)"/>
+                @click="showModal(project.embed_code, project.name, project.project_type, project.repo_link, project.deploy_link, project.be_deploy_link, project.fe_deploy_link, project.description, project.image_link, project.project_tag)"/>
         </div>
         <modal-component
             :isOpen="modalIsOpen"
             @close="closeModal">
             <project-modal-content-component
                 :projectName="modalProjectName"
+                :projectType="modalProjectType"
                 :repoLink="modalRepoLink"
                 :deployLink="modalDeployLink"
                 :beDeployLink="modalBELink"
@@ -66,6 +67,7 @@ export default {
             modalIsOpen: false,
             modalEmbedLink: "",
             modalProjectName: "",
+            modalProjectType: "",
             modalRepoLink: "",
             modalDeployLink: "",
             modalBELink: "",
@@ -85,9 +87,10 @@ export default {
             this.projects = require("/data/projects.json")
         },
 
-        showModal(embedLink, name, repoLink, demoLink, beLink, feLink, description, imageLink, tags) {
+        showModal(embedLink, name, type, repoLink, demoLink, beLink, feLink, description, imageLink, tags) {
             this.modalEmbedLink = embedLink;
             this.modalProjectName = name;
+            this.modalProjectType = type;
             this.modalDescription = description;
             this.modalImageLink = imageLink;
 
