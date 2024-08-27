@@ -1,9 +1,9 @@
 <template>
-    <div class="contact">
+    <div class="contact relative flex flex-col-reverse items-center  max-w-screen-xl px-4 mx-auto md:flex-row sm:px-6 p-8 h-[85vh] 2xl:h-[87.5vh]">
       <div class="contact-content">
-        <div class="left-content">
+        <div class="left-content flex flex-col justify-start py-5 md:w-1/2 md:pb-20 md:pt-10 md:pr-10">
             <div id="left-content-components">
-                <h2>Contact</h2>
+                <h2 class="text-[24px] text-my-header font-semibold mb-2">Contact</h2>
                 <ul>
                     <li>
                         <img src="../assets/icons/envelope_icon.png" alt="icon">
@@ -32,9 +32,9 @@
                 </div>
             </div>
         </div>
-        <div class="right-content">
+        <div class="right-content flex flex-col justify-start py-5 md:w-1/2 md:pb-20 md:pt-10 md:pr-10">
             <span id="right-content-components">
-                <h2>Send Message</h2>
+                <h2 class="text-[24px] text-my-header font-semibold mb-2">Send Message</h2>
                 <form
                     id="contact-form"
                     @submit.prevent="handleSubmit"
@@ -118,20 +118,10 @@ h2 {
   color: #2ab179;
 }
 
-.contact {
-    margin: 20px 160px;
-}
-
 .contact-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.left-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
 .left-content li {
@@ -139,7 +129,7 @@ h2 {
     flex-direction: row;
     align-items: center;
     list-style-type: none;
-    margin-left: -40px;
+    margin-bottom: 15px;
 }
 
 .left-content li img {
@@ -148,15 +138,11 @@ h2 {
     margin-right: 10px;
 }
 
-#left-content-components {
-    align-items: left;
-}
-
 #sm-logo-links {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     gap: 27px;
 }
 
@@ -169,12 +155,6 @@ h2 {
     cursor: pointer;
     filter: brightness(1.25);
     transform: scale(1.1);
-}
-
-.right-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 label {
@@ -231,27 +211,4 @@ textarea {
 /* textarea:focus {
     border: solid #2ab179 2px;
 } */
-
-@media only screen and (min-width: 1600px) {
-    .contact {
-        margin: 20px 270px;
-    }
-
-    input[type=text] {
-        height: 5vh;
-    }
-
-    #submit-button {
-        height: 5vh;
-    }
-
-    @supports (-ms-ime-align:auto) {
-        .contact {
-            background-color: aqua;
-            display: flex;
-            flex-direction: column;
-            margin: 10px 240px;
-        }
-    }
-}
 </style>

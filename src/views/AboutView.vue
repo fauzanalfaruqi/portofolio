@@ -1,7 +1,7 @@
 <template>
-    <div id="about-content">
+    <div class="relative flex flex-col w-full max-w-screen-xl px-4 mx-auto sm:px-6 p-8">
         <div id="education-timeline">
-            <h1>Education</h1>
+            <h1 class="text-my-header text-[32px] font-semibold">Education</h1>
             <hr>
             <div id="timeline-container">
                 <timeline-component
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div id="experience-timeline">
-            <h1>Experience</h1>
+            <h1 class="text-my-header text-[32px] font-semibold">Experience</h1>
             <hr>
             <div id="timeline-container">
                 <timeline-component
@@ -41,7 +41,7 @@
             </div>
         </div>
         <div id="experience-timeline">
-            <h1>Non-formal Education</h1>
+            <h1 class="text-my-header text-[32px] font-semibold">Non-formal Education</h1>
             <hr>
             <div id="timeline-container">
                 <timeline-component
@@ -137,10 +137,6 @@ export default {
     margin: 10px 160px;
 }
 
-h1 {
-    font-size: 32px;
-}
-
 p { 
     font-size: 16px;
     font-weight: 400;
@@ -155,26 +151,15 @@ ul {
 }
 
 ul > li {
+    list-style-type: circle;
     margin-bottom: 10px;
-}
-
-#timeline-container {
-    margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 #timeline-container {
     margin-top: 20px;
     margin-left: 50px;
     border-left: 2.5px solid #3F94A7;
-}
-
-@media only screen and (min-width: 1600px) {
-    #about-content {
-        display: flex;
-        flex-direction: column;
-        margin: 10px 260px;
-    }
 }
 
 </style>

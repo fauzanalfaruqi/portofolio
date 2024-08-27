@@ -1,18 +1,18 @@
 <template>
-    <div id="projects-content">
-        <h1>Projects</h1>
-        <hr>
+    <div class="relative flex flex-col w-full max-w-screen-xl px-4 mx-auto sm:px-6 p-8">
+        <h1 class="text-[32px] font-semibold text-my-header">Projects</h1>
+        <hr class="mb-[5px]">
         <div id="dropdown-container">
             <!-- <dropdown-component/>
             <dropdown-component/> -->
         </div>
-        <div id="content-container">
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             <project-content-component
                 v-for="project in projects"
                 :key="project.id"
                 :imageLink="project.image_link"
-                :title="project.name"
-                :description="truncateString(project.description)"
+                :title="truncateString(project.name, 15)"
+                :description="truncateString(project.description, 85)"
                 :tags="project.project_tag"
                 @click="showModal(project.embed_code, project.name, project.repo_link, project.demo_link, project.description, project.image_link, project.project_tag)"/>
         </div>
@@ -99,9 +99,9 @@ export default {
             this.modalIsOpen = false;
         },
 
-        truncateString(str) {
-            if (str && str.length > 115) {
-                return str.substring(0, 112) + "...";
+        truncateString(str, max) {
+            if (str && str.length > max) {
+                return str.substring(0, max-3) + "...";
             } else {
                 return str
             }
@@ -111,15 +111,8 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-    font-size: 32px;
-}
 
-hr {
-    margin-bottom:5px;
-}
-
-#modal-image {
+/* #modal-image {
     margin-bottom: 5px;
 }
 
@@ -130,45 +123,5 @@ hr {
 }
 
 /* Apply style specifically for Microsoft Edge */
-@supports (-ms-ime-align:auto) {
-    #projects-content {
-        background-color: aqua;
-        display: flex;
-        flex-direction: column;
-        margin: 10px 140px;
-    }
-}
-
-#content-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 10px;
-}
-
-#dropdown-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
-    gap: 5px;
-}
-
-@media only screen and (min-width: 1600px) {
-    #projects-content {
-        display: flex;
-        flex-direction: column;
-        margin: 10px 270px;
-    }
-
-    @supports (-ms-ime-align:auto) {
-        #projects-content {
-            background-color: aqua;
-            display: flex;
-            flex-direction: column;
-            margin: 10px 240px;
-        }
-    }
-}
 
 </style>

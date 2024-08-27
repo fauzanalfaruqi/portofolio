@@ -1,7 +1,7 @@
 <template>
     <div class="project-modal-content">
         <slot></slot>
-        <h2>{{ projectName }}</h2>
+        <h2 class="font-bold text-[32px] mx-2 my-2 text-my-header">{{ projectName }}</h2>
         <hr>
         <p v-if="repoLink">Repository link: <a :href="repoLink" target="_blank">{{ repoLink }}</a></p>
         <p v-if="demoLink">Demo link: <a :href="demoLink" target="_blank">{{ demoLink }}</a></p>
@@ -12,11 +12,11 @@
                     class="project-content-tag"
                     v-for="(tag, index) in tags"
                     :key="index">
-                    <p
-                        class="tag-text"
+                    <span
+                        class="inline-block rounded-md px-3 py-1 text-[0.65rem] font-medium mr-2 mb-2 text-white"
                         :style="{ backgroundColor: tag.tag_color }">
                         {{ tag.tag_name }}
-                    </p>
+            </span>
                 </div>
             </div>
         </div>
@@ -40,12 +40,6 @@ export default {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-}
-
-h2 {
-    color: #5A5A5A;
-    margin: 5px 10px;
-    font-size: 32px;
 }
 
 p {

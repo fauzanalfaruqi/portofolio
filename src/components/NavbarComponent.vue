@@ -1,6 +1,6 @@
 <template>
-    <div class="navbar">
-        <div class="nav-container">
+    <div class="navbar pt-[10px]">
+        <div class="flex flex-row items-center justify-end max-w-screen-xl px-4 mx-auto sm:px-6">
             <router-link :class="{'active-nav-link': $route.path === '/portofolio', 'nav-link': $route.path !== '/portofolio'}" to="/portofolio">Home</router-link>
             <router-link :class="{'active-nav-link': $route.path === '/about', 'nav-link': $route.path !== '/about'}" to="/about">About</router-link>
             <router-link :class="{'active-nav-link': $route.path === '/projects', 'nav-link': $route.path !== '/projects'}" to="/projects">Projects</router-link>
@@ -17,18 +17,6 @@ export default {
 </script>
 
 <style>
-.navbar {
-    padding-top: 10px;
-    margin: 0;
-}
-
-.nav-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    margin: 0px 150px;
-}
 
 .nav-link {
     color: #3F94A7;

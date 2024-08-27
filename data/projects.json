@@ -1,6 +1,54 @@
 [
-    {
-      "id": "p001",
+  {
+    "id": "p001",
+    "name": "Web Template E-Commerce",
+    "description": "The Web Template E Commerce App is a comprehensive full-stack application developed as the capstone project for Super Bootcamp Jawa Barat 2024. It integrates Go and MySQL on the backend with a frontend crafted using NextJS and styled with Tailwind CSS. The application is deployed on Vercel, ensuring seamless performance and scalability",
+    "demo_link": "https://fe-ecommerce-web-template.vercel.app/",
+    "image_link": "https://placehold.co/600x400/png",
+    "project_tag": [
+      {
+        "id": "pt001",
+        "tag_name": "Go",
+        "tag_color": "#08AFD8"
+      },
+      {
+        "id": "pt002",
+        "tag_name": "MySQL",
+        "tag_color": "#F29111"
+      },
+      {
+        "id": "pt003",
+        "tag_name": "NextJS",
+        "tag_color": "#080808"
+      }
+    ]
+  },
+  {
+    "id": "p002",
+    "name": "Bike Review App",
+    "description": "Bike Review is a full-stack web application developed as a React-based task during Superbootcamp Jawa Barat 2024. The backend is powered by Go and Supabase, while the frontend is crafted using ReactJS, with Tailwind CSS for styling and DaisyUI to accelerate the design process.",
+    "demo_link": "https://fp-sb-react.vercel.app/",
+    "image_link": "https://placehold.co/600x400/png",
+    "project_tag": [
+      {
+        "id": "pt001",
+        "tag_name": "Go",
+        "tag_color": "#08AFD8"
+      },
+      {
+        "id": "pt002",
+        "tag_name": "Supabase",
+        "tag_color": "#41B883"
+      },
+      {
+        "id": "pt003",
+        "tag_name": "ReactJS",
+        "tag_color": "#1FBCFD"
+      }
+    ]
+  },
+  {
+      "id": "p003",
       "name": "E-Clinic",
       "description": "E-Clinic is a clinic management system API built using Go. This project was created during final project of the Go bootcamp at Enigmacamp. Implements clean architecture, the program can perform CRUD operations and Authorization using JWT.",
       "repo_link": "https://github.com/fauzanalfaruqi/avenger-clinic/",
@@ -20,9 +68,9 @@
       ]
     },
     {
-        "id": "p002",
-        "name": "Portofolio SPA",
-        "description": "This project is a single-page application (SPA) website built using Vue.js. It serves as my online resume and showcases my personal projects. The website utilizes GitHub Pages for deployment and Firebase to host static files.",
+        "id": "p004",
+        "name": "Portofolio Web App",
+        "description": "The Portfolio Web App is a frontend application built with Vue.js, featuring client-side routing powered by Vue Router. It integrates with Formspree to handle messages from visitors. The app is hosted on Firebase for serving static files and deployed to GitHub Pages.",
         "demo_link": "https://fauzanalfaruqi.github.io/portofolio/",
         "repo_link": "https://github.com/fauzanalfaruqi/portofolio/",
         "image_link": "https://fa-portofolio.web.app/posters/portofolio-poster.png",
@@ -41,7 +89,7 @@
         ]
       },
     {
-      "id": "p003",
+      "id": "p005",
       "name": "Moonwalker",
       "description": "Moonwalker is 2D platformer infinite runner game built using Unity Engine. This game was created during Pizza Jam submission on Itch.io",
       "demo_link": "https://efei.itch.io",
@@ -61,7 +109,7 @@
       ]
     },
     {
-        "id": "p004",
+        "id": "p006",
         "name": "Pie In The Sky",
         "description": "Pie In The Sky is a 2D casual game made with Unity. This game is based on coding challenge made by Daniel Shiffman from The Coding Train. Challenge link: https://thecodingtrain.com/challenges/169-pi-in-the-sky",
         "demo_link": "https://efei.itch.io",
@@ -81,7 +129,7 @@
         ]
     },
     {
-        "id": "p005",
+        "id": "p007",
         "name": "Throw Boll",
         "description": "Throw Boll is a hyper-casual game created using the Unity engine. This game implements authentication and a leaderboard system using Firebase, ads using AdMob, and in-app purchases using Unity's built-in IAP package.",
         "demo_link": "https://apkpure.com/a-game-for-you-to-feel-bored/com.MorbagStudio.ThrowBoll/",
@@ -105,7 +153,7 @@
         ]
       },
       {
-        "id": "p006",
+        "id": "p008",
         "name": "Tetorisu",
         "description": "Tetorisu is a casual puzzle game derived from the classic Tetris. Developed with the Unity Engine, this game features a leaderboard system implemented using PlayFab and includes ads via AdMob.",
         "demo_link": "https://apkpure.com/tetorisu-block-puzzle-game/com.MorbagStudio.NewTetorisu",
@@ -129,7 +177,7 @@
         ]
       },
       {
-        "id": "p007",
+        "id": "p009",
         "name": "Night Fishing",
         "description": "Night Fishing is a 2D idle fishing game made with the Unity Engine. It utilizes the Unity Universal Render Pipeline to implement night visual effects and lighting.",
         "demo_link": "https://night-fishing.en.uptodown.com/android",

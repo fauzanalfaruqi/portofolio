@@ -106,5 +106,39 @@
           "description": "Docker"
         }
       ]
+    },
+    {
+      "id": "nfe003",
+      "institution_name": "Super Bootcamp Jawa Barat 2024",
+      "course": "Go - NextJS",
+      "start_at_day": "17",
+      "start_at_month": "06",
+      "start_at_year": "2024",
+      "end_at_day": "09",
+      "end_at_month": "08",
+      "end_at_year": "2024",
+      "nf_education_details":
+      [
+        {
+          "id": "nfed001",
+          "description": "Go"
+        },
+        {
+          "id": "nfed002",
+          "description": "MySQL"
+        },
+        {
+          "id": "nfed003",
+          "description": "Javascript"
+        },
+        {
+          "id": "nfed004",
+          "description": "React"
+        },
+        {
+          "id": "nfed005",
+          "description": "NextJS"
+        }
+      ]
     }
 ]

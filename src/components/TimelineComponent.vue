@@ -13,7 +13,7 @@
                 </div>
             </div>
         </div>
-</div>
+    </div>
 </template>
 
 <script>
@@ -28,14 +28,15 @@ export default {
 
 <style scoped>
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
+
 /* Outer Layer with the timeline border */
 /* .outer {
   border-left: 2px solid #3F94A7;
@@ -54,10 +55,10 @@ body {
 
 /* Information about the timeline */
 .info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 5px;
 }
 
 .info slot {
@@ -68,8 +69,8 @@ body {
 /* Title of the card */
 .title {
     font-weight: 600;
-  color: #5A5A5A;
-  position: relative;
+    color: #5A5A5A;
+    position: relative;
 }
 
 .year {
@@ -97,13 +98,13 @@ body {
 
 /* Timeline dot  */
 .title::before {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  background: white;
-  border-radius: 999px;
-  left: -130px;
-  border: 3px solid #3F94A7;
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 999px;
+    left: -127px;
+    border: 3px solid #3F94A7;
 }
 </style>

@@ -33,7 +33,7 @@ p {
     font-weight:400;
     text-decoration: none;
     text-align: center;
-    padding: 0 25px;
+    padding: 10px 25px;
 }
 
 hr {

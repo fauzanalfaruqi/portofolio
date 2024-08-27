@@ -1,5 +1,5 @@
 <template>
-    <div class="project-card">
+    <!-- <div class="project-card">
             <img :src="imageLink" alt="project-card-pic">
             <div class="project-card-content">
                 <h3>{{ title }}</h3>
@@ -25,7 +25,26 @@
                     <button>See More</button>
                 </div>
             </div>
+        </div> -->
+    <div class="project-card overflow-hidden shadow-lg border-2 border-[#3F94A7] rounded-[10px] mb-2">
+        <img class="w-full" :src="imageLink" alt="project-thumbnail">
+        <div class="px-4 py-2">
+            <div class="font-bold text-xl mb-2 text-my-header hover:underline">{{ title }}</div>
+            <p class="text-gray-700 text-base">{{ description }}</p>
         </div>
+        <div class="px-4">
+            <div 
+                class="pb-2 inline-flex justify-start"
+                v-for="(tag, index) in tags"
+                :key="index">
+                <span
+                    class="inline-block rounded-md px-3 py-1 text-[0.65rem] font-medium mr-2 mb-2 text-white"
+                    :style="{ backgroundColor: tag.tag_color }">
+                    {{ tag.tag_name }}
+                </span>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -46,7 +65,7 @@ export default {
 </script>
 
 <style scoped>
-h3 {
+/* h3 {
     color: #5A5A5A;
     margin: 5px 0;
 }
@@ -62,12 +81,11 @@ p {
     flex-direction: column;
     border: solid 2px #3F94A7;
     border-radius: 10px;
-    width: 325px;
     height: 390px;
 }
 
 .project-card img {
-    width: 325px;
+    width: auto;
     border-radius: 7.5px 7.5px 0 0;
 }
 
@@ -120,7 +138,7 @@ p {
     border: none;
     border-radius: 5px;
     margin-top: 10px;
-}
+} */
 
 .project-card:hover {
     cursor: pointer;
