@@ -62,7 +62,7 @@
     <modal-component :isOpen="modalIsOpen" @close="closeModal">
       <download-cv-modal-component :enigmaCVLink="'https://fa-portofolio.web.app/enigma_resume.pdf'"
         :regularCVLink="'https://fa-portofolio.web.app/resume.pdf'"
-        :fileIconLink="'https://fa-portofolio.web.app/icons/pdf_icon.png'">
+        :fileIconLink="'../assets/pdf_icon.png'">
 
       </download-cv-modal-component>
     </modal-component>

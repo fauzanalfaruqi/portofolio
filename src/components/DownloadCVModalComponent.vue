@@ -4,7 +4,7 @@
         <hr>
         <p v-if="regularCVLink">CV: <br>
             <span class="icon-link">
-                <img :src="fileIconLink" alt="file-icon">
+                <img src="../assets/pdf-icon.png" alt="file-icon">
                 <a :href="regularCVLink" target="_blank">
                     {{ regularCVLink }}
                 </a>
@@ -12,7 +12,7 @@
         </p>
         <p v-if="enigmaCVLink">Enigma CV: <br>
             <span class="icon-link">
-                <img :src="fileIconLink" alt="file-icon">
+                <img src="../assets/pdf-icon.png" alt="file-icon">
                 <a :href="enigmaCVLink" target="_blank">
                     {{ enigmaCVLink }}
                 </a>
@@ -27,7 +27,7 @@ export default {
     props: {
         enigmaCVLink: String,
         regularCVLink: String,
-        fileIconLink: String,
+        // fileIconLink: String,
     }
 }
 </script>
@@ -65,7 +65,7 @@ hr {
 }
 
 .icon-link img {
-    width: 17px;
+    width: 15px;
     height: 17px;
     padding-top: 2.5px;
     margin-right: 5px;
