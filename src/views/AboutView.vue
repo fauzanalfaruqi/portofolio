@@ -1,7 +1,7 @@
 <template>
     <div class="relative flex flex-col w-full max-w-screen-xl px-4 mx-auto sm:px-6 p-8">
         <div id="education-timeline">
-            <h1 class="text-my-header text-[32px] font-semibold">Education</h1>
+            <h1 class="text-my-header text-[26px] font-bold">Education</h1>
             <hr>
             <div id="timeline-container">
                 <timeline-component
@@ -22,7 +22,7 @@
         </div>
 
         <div id="experience-timeline">
-            <h1 class="text-my-header text-[32px] font-semibold">Experience</h1>
+            <h1 class="text-my-header text-[26px] font-bold">Experience</h1>
             <hr>
             <div id="timeline-container">
                 <timeline-component
@@ -43,7 +43,7 @@
         </div>
 
         <div id="experience-timeline">
-            <h1 class="text-my-header text-[32px] font-semibold">Non-formal Education</h1>
+            <h1 class="text-my-header text-[26px] font-bold">Non-formal Education</h1>
             <hr>
             <div id="timeline-container">
                 <timeline-component

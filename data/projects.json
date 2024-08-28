@@ -27,7 +27,7 @@
       },
       {
         "id": "bk004",
-        "description": "Implemented a feature to add and remove product ©ikes (pending frontend integration),"
+        "description": "Implemented a feature to add and remove product likes (pending frontend integration),"
       },
       {
         "id": "bk005",
@@ -77,6 +77,44 @@
     "image_link": "https://fa-portofolio.web.app/posters/bikereview-poster.png",
     "thumbnail_link": "https://fa-portofolio.web.app/posters/bikereview-thumbnail-poster.png",
     "project_type": "Individual project",
+    "key_features": [
+      {
+        "id": "kf001",
+        "description": "Homepage: Displays a selection of the latest bikes and featured bike vendors,"
+      },
+      {
+        "id": "kf002",
+        "description": "Authentication Page: Allows users to register a new account and log in to the application,"
+      },
+      {
+        "id": "kf003",
+        "description": "Bikes Page: Fetches and displays all available bikes,"
+      },
+      {
+        "id": "kf004",
+        "description": "Bike Details Page: Shows detailed information about a specific bike, including all reviews for that bike,"
+      },
+      {
+        "id": "kf005",
+        "description": "Vendors Page: Fetches and displays all available bike vendors,"
+      },
+      {
+        "id": "kf006",
+        "description": "Account Page: Allows users to view and modify their account details, including updating their profile, changing their password, and deleting their account,"
+      },
+      {
+        "id": "kf007",
+        "description": "Review Feature: Enables users to add a comment and rate a bike. Each user can submit only one review per bike,"
+      },
+      {
+        "id": "kf008",
+        "description": "Search Feature: Allows users to search for bikes by name, streamlining the discovery process,"
+      },
+      {
+        "id": "kf009",
+        "description": "Utilized stored procedures on the database side for operations that modify multiple tables, improving code clarity and performance by reducing network traffic and optimizing round-trip response times."
+      }
+    ],
     "links": [
       {
         "be_deploy": "https://fp-sb-go.et.r.appspot.com/api/v1/swagger/index.html",

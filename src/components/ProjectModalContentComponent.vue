@@ -1,7 +1,7 @@
 <template>
     <div class="project-modal-content">
         <slot></slot>
-        <h2 class="font-bold text-[32px] mx-2 my-2 text-my-header">{{ projectName }}</h2>
+        <h2 class="font-bold text-xl mx-2 my-2 text-my-header">{{ projectName }}</h2>
         <hr>
         <p>
             <span class="font-bold text-my-header">Description: </span>
@@ -13,6 +13,38 @@
             <span class="font-bold text-my-header">Project type: </span>
             {{ projectType }}
         </p>
+
+        <div v-if="beKeypoints" class="mb-1">
+            <p class="font-bold text-my-header">My key contribution to the project: </p>
+            <div>
+                <p class="text-my-header font-regular">Backend:</p>
+                <ul class="pl-10">
+                    <li class="text-my-header font-regular" v-for="point in beKeypoints" :key="point.id">
+                        {{ point.description }}
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="text-my-header font-regular">Frontend:</p>
+                <ul class="pl-10">
+                    <li class="text-my-header font-regular" v-for="point in feKeypoints" :key="point.id">
+                        {{ point.description }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div v-if="keyFeatures" class="mb-1">
+            <p class="font-bold text-my-header">Key features: </p>
+            <div>
+                <ul class="pl-10">
+                    <li class="text-my-header font-regular" v-for="key in keyFeatures" :key="key.id">
+                        {{ key.description }}
+                    </li>
+                </ul>
+            </div>
+        </div>
 
         <p class="font-bold text-my-header">Project links: </p>
         <ul class="pl-10">
@@ -69,6 +101,9 @@ export default {
         feDeployLink: String,
         description: String,
         tags: Array,
+        beKeypoints: Array,
+        feKeypoints: Array,
+        keyFeatures: Array
     }
 }
 </script>

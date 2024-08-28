@@ -30,6 +30,7 @@ export default {
 
 p {
     color: #3F94A7;
+    font-size: 16px;
     font-weight:400;
     text-decoration: none;
     text-align: center;

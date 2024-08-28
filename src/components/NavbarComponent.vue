@@ -20,6 +20,7 @@ export default {
 
 .nav-link {
     color: #3F94A7;
+    font-size: 16px;
     font-weight:400;
     text-decoration: none;
     text-align: center;
@@ -29,6 +30,7 @@ export default {
 .active-nav-link {
     background-color: #3F94A7;
     color: #ffffff;
+    font-size: 16px;
     font-weight:400;
     text-decoration: none;
     text-align: center;

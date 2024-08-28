@@ -24,29 +24,25 @@
 </script>
 
 <style scoped>
-button {
-    margin: 5px 0;
-}
-
 .primary-button {
     background-color: #3F94A7;
     color: white;
     border: none 0;
     border-radius: 10px;
-    width: 230px;
-    height: 55px;
+    width: 200px;
+    height: 50px;
     font-family: Poppins, Roboto, Helvetica;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .secondary-button {
     color: #3F94A7;
     border: solid 3px #3F94A7;
     border-radius: 10px;
-    width: 230px;
-    height: 55px;
+    width: 200px;
+    height: 50px;
     font-family: Poppins, Roboto, Helvetica;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 button:hover {

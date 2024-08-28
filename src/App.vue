@@ -38,7 +38,12 @@ h1 {
 }
 
 p {
+  font-size:14px;
   color: #5A5A5A;
+}
+
+li {
+  font-size:14px;
 }
 
 footer-container {

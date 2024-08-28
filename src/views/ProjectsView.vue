@@ -1,41 +1,37 @@
 <template>
     <div class="relative flex flex-col w-full max-w-screen-xl px-4 mx-auto sm:px-6 p-8">
-        <h1 class="text-[32px] font-semibold text-my-header">Projects</h1>
+        <h1 class="text-[26px] font-bold text-my-header">Projects</h1>
         <hr class="mb-[5px]">
         <div id="dropdown-container">
             <!-- <dropdown-component/>
             <dropdown-component/> -->
         </div>
         <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            <project-content-component
-                v-for="project in projects"
-                :key="project.id"
+            <project-content-component v-for="project in projects" :key="project.id"
                 :imageLink="project.thumbnail_link && project.thumbnail_link.trim() !== '' ? project.thumbnail_link : project.image_link"
-                :title="truncateString(project.name, 15)"
-                :description="truncateString(project.description, 85)"
-                :tags="project.project_tag"
-                @click="showModal(project.embed_code, project.name, project.project_type, project.links[0].repo, project.links[0].deploy, project.links[0].be_deploy, project.links[0].fe_deploy, project.description, project.image_link, project.project_tag)"/>
+                :title="truncateString(project.name, 15)" :description="truncateString(project.description, 85)"
+                :tags="project.project_tag" @click="showModal(
+                    project.embed_code,
+                    project.name,
+                    project.project_type,
+                    project.be_keypoints,
+                    project.fe_keypoints,
+                    project.key_features,
+                    project.links[0].repo,
+                    project.links[0].deploy,
+                    project.links[0].be_deploy,
+                    project.links[0].fe_deploy,
+                    project.description,
+                    project.image_link,
+                    project.project_tag)" />
         </div>
-        <modal-component
-            :isOpen="modalIsOpen"
-            @close="closeModal">
-            <project-modal-content-component
-                :projectName="modalProjectName"
-                :projectType="modalProjectType"
-                :repoLink="modalRepoLink"
-                :deployLink="modalDeployLink"
-                :beDeployLink="modalBELink"
-                :feDeployLink="modalFELink"
-                :description="modalDescription"
-                :tags="modalTags">
-                <template
-                    v-if="modalEmbedLink">
-                    <iframe
-                        :src="modalEmbedLink"
-                        frameborder="0"
-                        allowfullscreen=""
-                        width="100%"
-                        height="480">
+        <modal-component :isOpen="modalIsOpen" @close="closeModal">
+            <project-modal-content-component :projectName="modalProjectName" :projectType="modalProjectType"
+                :beKeypoints="modalBeKeypoints" :feKeypoints="modalFeKeypoints" :keyFeatures="modalKeyfeatures"
+                :repoLink="modalRepoLink" :deployLink="modalDeployLink" :beDeployLink="modalBELink"
+                :feDeployLink="modalFELink" :description="modalDescription" :tags="modalTags">
+                <template v-if="modalEmbedLink">
+                    <iframe :src="modalEmbedLink" frameborder="0" allowfullscreen="" width="100%" height="480">
                     </iframe>
                 </template>
                 <template v-else>
@@ -74,7 +70,10 @@ export default {
             modalFELink: "",
             modalDescription: "",
             modalImageLink: "",
-            modalTags: []
+            modalTags: [],
+            modalBeKeypoints: [],
+            modalFeKeypoints: [],
+            modalKeyfeatures: [],
         };
     },
 
@@ -83,48 +82,49 @@ export default {
     },
 
     methods: {
-    fetchProjectData() {
-        this.projects = require("/data/projects.json")
-    },
+        fetchProjectData() {
+            this.projects = require("/data/projects.json")
+        },
 
-    showModal(embedLink, name, type, repoLink, demoLink, beLink, feLink, description, imageLink, tags) {
-        this.modalEmbedLink = embedLink;
-        this.modalProjectName = name;
-        this.modalProjectType = type;
-        this.modalDescription = description;
-        this.modalImageLink = imageLink;
+        showModal(embedLink, name, type, beKeypoints, feKeypoints, keyfeatures, repoLink, demoLink, beLink, feLink, description, imageLink, tags) {
+            this.modalEmbedLink = embedLink;
+            this.modalProjectName = name;
+            this.modalProjectType = type;
+            this.modalDescription = description;
+            this.modalImageLink = imageLink;
+            this.modalBeKeypoints = beKeypoints;
+            this.modalFeKeypoints = feKeypoints;
+            this.modalKeyfeatures = keyfeatures;
 
-        // Handling various structures of links
-        if (Array.isArray(repoLink) && repoLink.length > 0) {
-            this.modalRepoLink = repoLink[0].repo || "";
-        } else {
-            this.modalRepoLink = repoLink || "";
-        }
-        
-        if (Array.isArray(demoLink) && demoLink.length > 0) {
-            this.modalDeployLink = demoLink[0].deploy || "";
-        } else {
-            this.modalDeployLink = demoLink || "";
-        }
+            // Handling various structures of links
+            if (Array.isArray(repoLink) && repoLink.length > 0) {
+                this.modalRepoLink = repoLink[0].repo || "";
+            } else {
+                this.modalRepoLink = repoLink || "";
+            }
 
-        if (Array.isArray(beLink) && beLink.length > 0) {
-            this.modalBELink = beLink[0].be_deploy || "";
-        } else {
-            this.modalBELink = beLink || "";
-        }
+            if (Array.isArray(demoLink) && demoLink.length > 0) {
+                this.modalDeployLink = demoLink[0].deploy || "";
+            } else {
+                this.modalDeployLink = demoLink || "";
+            }
 
-        if (Array.isArray(feLink) && feLink.length > 0) {
-            this.modalFELink = feLink[0].fe_deploy || "";
-        } else {
-            this.modalFELink = feLink || "";
-        }
+            if (Array.isArray(beLink) && beLink.length > 0) {
+                this.modalBELink = beLink[0].be_deploy || "";
+            } else {
+                this.modalBELink = beLink || "";
+            }
 
-        this.modalTags = tags;
-        
-        this.modalIsOpen = true;
+            if (Array.isArray(feLink) && feLink.length > 0) {
+                this.modalFELink = feLink[0].fe_deploy || "";
+            } else {
+                this.modalFELink = feLink || "";
+            }
 
-        console.log(embedLink, name, type, repoLink, demoLink, beLink, feLink, description, imageLink, tags);
-    },
+            this.modalTags = tags;
+
+            this.modalIsOpen = true;
+        },
 
         closeModal() {
             this.modalIsOpen = false;
@@ -132,7 +132,7 @@ export default {
 
         truncateString(str, max) {
             if (str && str.length > max) {
-                return str.substring(0, max-3) + "...";
+                return str.substring(0, max - 3) + "...";
             } else {
                 return str
             }
@@ -142,7 +142,6 @@ export default {
 </script>
 
 <style scoped>
-
 /* #modal-image {
     margin-bottom: 5px;
 }
@@ -154,5 +153,4 @@ export default {
 }
 
 /* Apply style specifically for Microsoft Edge */
-
 </style>

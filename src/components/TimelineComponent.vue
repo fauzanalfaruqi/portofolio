@@ -8,7 +8,7 @@
                         <h3 class="card-tag">{{ timelineTag }}</h3>
                     </div>
                     <hr>
-                    <h4 class="year">{{ year }}</h4>
+                    <p class="year">{{ year }}</p>
                     <slot></slot>
                 </div>
             </div>
@@ -62,7 +62,7 @@ body {
 }
 
 .info slot {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -77,7 +77,7 @@ body {
     font-weight: 400;
     font-style: italic;
     color: #5A5A5A;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .card-title-container {

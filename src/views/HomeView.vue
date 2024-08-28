@@ -33,16 +33,16 @@
   <div class="relative flex flex-col-reverse items-center max-w-screen-xl px-4 mx-auto md:flex-row sm:px-6 p-8 h-[85vh] 2xl:h-[87.5vh]">
     <div class="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pr-10">
       <div class="text-center md:text-left">
-        <h1 class="font-bold text-my-header text-[36px] text-left">M. Fauzan Al-Faruqi</h1>
-        <div class="flex flex-row text-left">
-          <img class="w-[14px] h-[20px] mt-[2px] mr-[7.5px]" src="../assets/pin-map-logo.png" alt="pin-map">
+        <h1 class="font-bold text-my-header text-[32px] text-left">M. Fauzan Al-Faruqi</h1>
+        <div class="flex flex-row text-left mt-1">
+          <img class="w-[12px] h-[18px] mr-[7.5px]" src="../assets/pin-map-logo.png" alt="pin-map">
           <p class="text-my-primary">Sukabumi City, West Java</p>
         </div>
-        <p class="max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl text-left">
+        <p class="max-w-md mx-auto mt-4 text-[16px] text-my-header md:max-w-3xl text-left">
           An IT enthusiast proficient in backend development using Go, and have years of experience in game development
           utilizing Unity Engine.
         </p>
-        <div class="mt-5 sm:flex md:mt-8 gap-2">
+        <div class="mt-6 sm:flex gap-2">
           <button-component :style="'primary'" @click="showModal">Download CV
           </button-component>
           <router-link to="/portofolio/projects">
@@ -54,7 +54,7 @@
     </div>
     <div class="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pl-10">
       <div class="relative w-full p-3 rounded  md:p-8 flex justify-center md:justify-end">
-        <div class="rounded-lg bg-white text-black w-4/5">
+        <div class="rounded-lg bg-white text-black w-[70%]">
           <img src="../assets/profile.png" />
         </div>
       </div>
