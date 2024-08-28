@@ -30,7 +30,7 @@
         <img class="w-full" :src="imageLink" alt="project-thumbnail">
         <div class="px-4 py-2">
             <div class="font-bold text-xl mb-2 text-my-header hover:underline">{{ title }}</div>
-            <p class="text-gray-700 text-base">{{ description }}</p>
+            <p class=" text-my-header text-base">{{ description }}</p>
         </div>
         <div class="px-4">
             <div 

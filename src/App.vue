@@ -37,6 +37,10 @@ h1 {
   font-size: 32px;
 }
 
+p {
+  color: #5A5A5A;
+}
+
 footer-container {
   margin-top: auto;
 }
