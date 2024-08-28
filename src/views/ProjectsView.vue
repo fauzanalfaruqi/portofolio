@@ -14,7 +14,7 @@
                 :title="truncateString(project.name, 15)"
                 :description="truncateString(project.description, 85)"
                 :tags="project.project_tag"
-                @click="showModal(project.embed_code, project.name, project.project_type, project.repo_link, project.deploy_link, project.be_deploy_link, project.fe_deploy_link, project.description, project.image_link, project.project_tag)"/>
+                @click="showModal(project.embed_code, project.name, project.project_type, project.links[0].repo, project.links[0].deploy, project.links[0].be_deploy, project.links[0].fe_deploy, project.description, project.image_link, project.project_tag)"/>
         </div>
         <modal-component
             :isOpen="modalIsOpen"
@@ -83,26 +83,48 @@ export default {
     },
 
     methods: {
-        fetchProjectData() {
-            this.projects = require("/data/projects.json")
-        },
+    fetchProjectData() {
+        this.projects = require("/data/projects.json")
+    },
 
-        showModal(embedLink, name, type, repoLink, demoLink, beLink, feLink, description, imageLink, tags) {
-            this.modalEmbedLink = embedLink;
-            this.modalProjectName = name;
-            this.modalProjectType = type;
-            this.modalDescription = description;
-            this.modalImageLink = imageLink;
+    showModal(embedLink, name, type, repoLink, demoLink, beLink, feLink, description, imageLink, tags) {
+        this.modalEmbedLink = embedLink;
+        this.modalProjectName = name;
+        this.modalProjectType = type;
+        this.modalDescription = description;
+        this.modalImageLink = imageLink;
 
-            this.modalRepoLink = repoLink && repoLink.trim() !== "" ? repoLink : "";
-            this.modalDeployLink = demoLink && demoLink.trim() !== "" ? demoLink : "";
-            this.modalBELink = beLink && beLink.trim() !== "" ? beLink : "";
-            this.modalFELink = feLink && feLink.trim() !== "" ? feLink : "";
+        // Handling various structures of links
+        if (Array.isArray(repoLink) && repoLink.length > 0) {
+            this.modalRepoLink = repoLink[0].repo || "";
+        } else {
+            this.modalRepoLink = repoLink || "";
+        }
+        
+        if (Array.isArray(demoLink) && demoLink.length > 0) {
+            this.modalDeployLink = demoLink[0].deploy || "";
+        } else {
+            this.modalDeployLink = demoLink || "";
+        }
 
-            this.modalTags = tags;
-            
-            this.modalIsOpen = true;
-        },
+        if (Array.isArray(beLink) && beLink.length > 0) {
+            this.modalBELink = beLink[0].be_deploy || "";
+        } else {
+            this.modalBELink = beLink || "";
+        }
+
+        if (Array.isArray(feLink) && feLink.length > 0) {
+            this.modalFELink = feLink[0].fe_deploy || "";
+        } else {
+            this.modalFELink = feLink || "";
+        }
+
+        this.modalTags = tags;
+        
+        this.modalIsOpen = true;
+
+        console.log(embedLink, name, type, repoLink, demoLink, beLink, feLink, description, imageLink, tags);
+    },
 
         closeModal() {
             this.modalIsOpen = false;
