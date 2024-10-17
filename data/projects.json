@@ -117,7 +117,7 @@
     ],
     "links": [
       {
-        "be_deploy": "https://fp-sb-go.et.r.appspot.com/api/v1/swagger/index.html",
+        "be_deploy": "https://fp-super-bootcamp-go-wheat.vercel.app/api/v1/swagger/index.html",
         "fe_deploy": "https://fp-sb-react.vercel.app/"
       }
     ],
