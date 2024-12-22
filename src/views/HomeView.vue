@@ -60,8 +60,8 @@
       </div>
     </div>
     <modal-component :isOpen="modalIsOpen" @close="closeModal">
-      <download-cv-modal-component :enigmaCVLink="'https://fa-portofolio.web.app/enigma_resume.pdf'"
-        :regularCVLink="'https://fa-portofolio.web.app/resume.pdf'"
+      <download-cv-modal-component :enigmaCVLink="'https://fa-githubio.web.app/static/enigma_resume.pdf'"
+        :regularCVLink="'https://fa-githubio.web.app/static/resume.pdf'"
         :fileIconLink="'../assets/pdf_icon.png'">
 
       </download-cv-modal-component>
