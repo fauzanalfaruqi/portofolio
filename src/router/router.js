@@ -1,5 +1,5 @@
 // router.js
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import AboutView from '../views/AboutView.vue';
 import ProjectsView from '../views/ProjectsView.vue';
@@ -9,7 +9,7 @@ import FooterComponent from '../components/FooterComponent.vue'
 
 const routes = [
   {
-    path: '/portofolio',
+    path: '/',
     name: 'Home',
     components: {
         default: HomeView,
@@ -18,7 +18,7 @@ const routes = [
     }
   },
   {
-    path: '/portofolio/about',
+    path: '/about',
     name: 'About',
     components: {
         default: AboutView,
@@ -27,7 +27,7 @@ const routes = [
     }
   },
   {
-    path: '/portofolio/projects',
+    path: '/projects',
     name: 'Projects',
     components: {
         default: ProjectsView,
@@ -36,7 +36,7 @@ const routes = [
     }
   },
   {
-    path: '/portofolio/contact',
+    path: '/contact',
     name: 'Contact',
     components: {
         default: ContactView,
@@ -47,8 +47,8 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
-  base: '/portofolio/',
+  history: createWebHashHistory(),
+  base: '/',
   routes
 });
 
