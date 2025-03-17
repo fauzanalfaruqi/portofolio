@@ -45,7 +45,7 @@
         <div class="mt-6 sm:flex gap-2">
           <button-component :style="'primary'" @click="showModal">Download CV
           </button-component>
-          <router-link to="/portofolio/projects">
+          <router-link to="/projects">
             <button-component :style="'secondary'">See My Projects
             </button-component>
           </router-link>
