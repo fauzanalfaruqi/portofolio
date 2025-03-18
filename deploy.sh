@@ -16,6 +16,6 @@ git commit -m 'deploy'
 
 # create or switch to the `dist` branch and push forcefully
 git branch -M dist
-git push -f git@github.com:fauzanalfaruqi/fauzanalfaruqi.github.io.git dist
+git push -f https://github.com/fauzanalfaruqi/fauzanalfaruqi.github.io.git dist
 
 cd ..
