@@ -1,68 +1,83 @@
 <template>
-    <div class="contact relative flex flex-col-reverse items-center  max-w-screen-xl px-4 mx-auto md:flex-row sm:px-6 p-8 h-[85vh] 2xl:h-[87.5vh]">
-      <div class="contact-content">
-        <div class="left-content flex flex-col justify-start py-5 md:w-1/2 md:pb-20 md:pt-10 md:pr-10">
-            <div id="left-content-components">
-                <h2 class="text-[24px] text-my-header font-semibold mb-2">Contact</h2>
-                <ul>
-                    <li>
-                        <img src="../assets/icons/envelope_icon.png" alt="icon">
-                        <p>Email:&nbsp;</p>
-                        <a class="contact-link" href="mailto:fauzanalfaruqi@gmail.com">fauzanalfaruqi@gmail.com</a>
-                    </li>
-                    <li>
-                        <img src="../assets/icons/linkedin_icon.png" alt="icon">
-                        <p>LinkedIn:&nbsp;</p>
-                        <a class="contact-link" href="https://linkedin.com/in/fauzanalfaruqi">linkedin.com/in/fauzanalfaruqi</a>
-                    </li>
-                    <li>
-                        <img src="../assets/icons/phone_icon.png" alt="icon">
-                        <p>Phone/WhatsApp:&nbsp;</p>
-                        <a class="contact-link" href="https://wa.me/62895411396153">+62895411396153</a>
-                    </li>
-                </ul>
-                <div id="sm-logo-links">
-                    <a href="https://t.me/fauzanalfaruqi/" target="_blank"> <img class="sm-logo-link" src="../assets/icons/telegram_icon.png" alt="telegram"> </a>
-                    <a href="https://github.com/fauzanalfaruqi" target="_blank"> <img class="sm-logo-link" src="../assets/icons/github_icon.png" alt="github"> </a>
-                    <a href="https://gitlab.com/fauzanalfaruqi" target="_blank"> <img class="sm-logo-link" src="../assets/icons/gitlab_icon.png" alt="gitlab"> </a>
-                    <a href="https://efei.itch.io" target="_blank"> <img class="sm-logo-link" src="../assets/icons/itch_icon.png" alt="itch.io"> </a>
-                    <a href="https://play.unity.com/u/fauzanalfaruqi" target="_blank"> <img class="sm-logo-link" src="../assets/icons/unity_icon.png" alt="unity-play"> </a>
-                    <a href="https://www.freelancer.com/u/fauzanalfaruqi" target="_blank"> <img class="sm-logo-link" src="../assets/icons/freelancer_icon.png" alt="freelancer"> </a>
-                    <a href="https://projects.co.id/public/browse_users/view/ebaa22/fauzanalfaruqi" target="_blank"> <img class="sm-logo-link" src="../assets/icons/projectsid_icon.png" alt="projects.co,id"> </a>
+    <section>
+        <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+                <div class="left-content-components lg:col-span-2 lg:py-12">
+                    <h2 class="text-[24px] text-my-header font-semibold mb-2">Contact</h2>
+                    <ul>
+                        <li>
+                            <img src="../assets/icons/envelope_icon.png" alt="icon">
+                            <p>Email:&nbsp;</p>
+                            <a class="contact-link" href="mailto:fauzanalfaruqi@gmail.com">fauzanalfaruqi@gmail.com</a>
+                        </li>
+                        <li>
+                            <img src="../assets/icons/linkedin_icon.png" alt="icon">
+                            <p>LinkedIn:&nbsp;</p>
+                            <a class="contact-link"
+                                href="https://linkedin.com/in/fauzanalfaruqi">linkedin.com/in/fauzanalfaruqi</a>
+                        </li>
+                        <li>
+                            <img src="../assets/icons/phone_icon.png" alt="icon">
+                            <p>Phone/WhatsApp:&nbsp;</p>
+                            <a class="contact-link" href="https://wa.me/62895411396153">+62895411396153</a>
+                        </li>
+                    </ul>
+                    <div id="sm-logo-links">
+                        <a href="https://t.me/fauzanalfaruqi/" target="_blank"> <img class="sm-logo-link"
+                                src="../assets/icons/telegram_icon.png" alt="telegram"> </a>
+                        <a href="https://github.com/fauzanalfaruqi" target="_blank"> <img class="sm-logo-link"
+                                src="../assets/icons/github_icon.png" alt="github"> </a>
+                        <a href="https://gitlab.com/fauzanalfaruqi" target="_blank"> <img class="sm-logo-link"
+                                src="../assets/icons/gitlab_icon.png" alt="gitlab"> </a>
+                        <a href="https://efei.itch.io" target="_blank"> <img class="sm-logo-link"
+                                src="../assets/icons/itch_icon.png" alt="itch.io"> </a>
+                        <a href="https://play.unity.com/u/fauzanalfaruqi" target="_blank"> <img class="sm-logo-link"
+                                src="../assets/icons/unity_icon.png" alt="unity-play"> </a>
+                        <a href="https://www.freelancer.com/u/fauzanalfaruqi" target="_blank"> <img class="sm-logo-link"
+                                src="../assets/icons/freelancer_icon.png" alt="freelancer"> </a>
+                        <a href="https://projects.co.id/public/browse_users/view/ebaa22/fauzanalfaruqi" target="_blank">
+                            <img class="sm-logo-link" src="../assets/icons/projectsid_icon.png" alt="projects.co,id">
+                        </a>
+                    </div>
                 </div>
+
+                <div class="rounded-lg p-0 lg:col-span-3 lg:p-12">
+                    <form @submit.prevent="handleSubmit" action="https://formspree.io/f/mjvnzavp"
+                        method="POST">
+                        <div>
+                            <label class="sr-only" for="name">Name</label>
+                            <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Name" type="text"
+                                id="name" v-model="name" :disabled="sending" />
+                        </div>
+
+                        <div>
+                            <label class="sr-only" for="message">Message</label>
+
+                            <textarea class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Message"
+                                rows="8" id="message" v-model="message" name="message" :disabled="sending"></textarea>
+                        </div>
+
+                        <div class="mt-4">
+                            <button type="submit" :disabled="sending"
+                                class="inline-block w-full rounded-lg px-5 py-3 font-medium text-white sm:w-auto" id="submit-button">
+                                {{ sending ? 'Sending...' : 'Submit Message' }}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
-        <div class="right-content flex flex-col justify-start py-5 md:w-1/2 md:pb-20 md:pt-10 md:pr-10">
-            <span id="right-content-components">
-                <h2 class="text-[24px] text-my-header font-semibold mb-2">Send Message</h2>
-                <form
-                    id="contact-form"
-                    @submit.prevent="handleSubmit"
-                    action="https://formspree.io/f/mjvnzavp"
-                    method="POST">
-                    <label for="email">Email: <br>
-                        <input type="email" id="email" v-model="email" name="email" :disabled="sending"><br>
-                    </label>
-                    <label for="message">Message: <br>
-                        <textarea id="message" v-model="message" name="message" :disabled="sending">
-                        </textarea><br>
-                    </label>
-                    <button id="submit-button" type="submit" :disabled="sending">
-                        {{ sending ? 'Sending...' : 'Submit Message' }}
-                    </button>
-                </form>
-            </span>
-        </div>
-      </div>
-    </div>
+    </section>
 </template>
+
 
 <script>
 
 export default {
     data() {
         return {
-            email: '',
+            name: '',
             message: '',
             sending: false
         };
@@ -79,14 +94,14 @@ export default {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        email: this.email,
+                        name: this.name,
                         message: this.message
                     })
                 });
-    
+
                 if (res.ok) {
                     alert('Message sent successfully!');
-                    this.email = '';
+                    this.name = '';
                     this.message = '';
                 } else {
                     const data = await res.json();
@@ -118,13 +133,7 @@ h2 {
   color: #2ab179;
 }
 
-.contact-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.left-content li {
+li {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -132,7 +141,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-.left-content li img {
+li img {
     width: 16px;
     height: 16px;
     margin-right: 10px;
@@ -163,11 +172,9 @@ label {
     color: #5A5A5A;
 }
 
-input[type=email] {
+input[type=text] {
     border: solid #3F94A7 2px;
     border-radius: 10px;
-    width: 70vh;
-    height: 5.5vh;
     font-family: Poppins, Roboto, Heveltica;
     font-size: 16px;
     color: #5A5A5A;
@@ -183,20 +190,14 @@ input[type=text]:focus {
 textarea {
     border: solid #3F94A7 2px;
     border-radius: 10px;
-    width: 70vh;
-    height: 25vh;
     font-family: Poppins, Roboto, Heveltica;
     font-size: 16px;
     color: #5A5A5A;
-    resize: none;
-    margin-bottom: 10px;
 }
 
 #submit-button {
     font-family: Poppins, Roboto, Helvetica;
     font-size: 16px;
-    width: 71vh;
-    height: 6.5vh;
     border: none;
     border-radius: 10px;
     background-color: #3F94A7;
