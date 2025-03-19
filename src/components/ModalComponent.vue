@@ -1,84 +1,35 @@
 <template>
-  <div v-if="isOpen" class="modal-overlay" @click.self="closeModal">
-    <div class="modal-body">
+  <div v-if="isOpen" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center p-4 sm:p-6 md:p-8"
+    @click.self="closeModal">
+    <div
+      class="bg-white rounded-lg shadow-xl relative overflow-auto max-h-[80vh] w-full xl:max-w-4xl md:max-w-2xl sm:max-w-lg">
+      <button @click="closeModal"
+        class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold focus:outline-none">
+        &times;
+      </button>
       <slot></slot>
     </div>
-    <button
-      @click="closeModal"
-      class="close-button">
-      X
-    </button>
   </div>
 </template>
-  
+
 <script>
 export default {
-  name: 'ModalComponent',
+  name: "ModalComponent",
   props: {
     isOpen: {
       type: Boolean,
-      default: false
+      default: false,
     },
-    title: String
+    title: String, // if you need a title slot in the future
   },
   methods: {
     closeModal() {
-      this.$emit('close');
-    }
-  }
+      this.$emit("close");
+    },
+  },
 };
 </script>
 
 <style scoped>
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-body {
-  background-color: white;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  overflow: auto;
-  max-width: 50%;
-  max-height: 80%;
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.modal-header h2 {
-  margin: 0;
-}
-
-.close-button {
-  color: #ffffff;
-  font-weight: 600;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 24px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.close-button:hover {
-  transform: scale(1.1);
-}
-
+/* You can add any additional custom styling here if needed */
 </style>
