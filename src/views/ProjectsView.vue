@@ -35,7 +35,7 @@
                     </iframe>
                 </template>
                 <template v-else>
-                    <img :src="modalImageLink" alt="Project image">
+                    <img :src="getImage(modalImageLink)" alt="Project image">
                 </template>
             </project-modal-content-component>
         </modal-component>
@@ -136,6 +136,10 @@ export default {
             } else {
                 return str
             }
+        },
+
+        getImage(path) {
+            return require(`@/assets/posters/${path}`);
         }
     }
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="project-card overflow-hidden shadow-lg border-2 border-[#3F94A7] rounded-[10px] mb-2">
-      <img class="w-full" :src="imageLink" alt="project-thumbnail">
+      <img class="w-full" :src="getImage(imageLink)" alt="project-thumbnail">
       <div class="px-4 py-2">
           <div class="font-bold text-lg mb-2 text-my-header hover:underline">{{ title }}</div>
           <p class=" text-my-header text-[14px]">{{ description }}</p>
@@ -30,6 +30,10 @@ export default {
   },
   
   methods: {
+      getImage(path) {
+        return require(`@/assets/posters/${path}`)
+      },
+
       handleClick() {
           this.$emit("click");
       },

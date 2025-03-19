@@ -28,27 +28,23 @@
         </div>
       </div>
     </div>
-    <modal-component :isOpen="modalIsOpen" @close="closeModal">
+    <!-- <modal-component :isOpen="modalIsOpen" @close="closeModal">
       <download-cv-modal-component :enigmaCVLink="'https://fa-githubio.web.app/static/enigma_resume.pdf'"
-        :regularCVLink="'https://fa-githubio.web.app/static/resume.pdf'"
+        :regularCVLink="'@/assets/pdf/resume.pdf'"
         :fileIconLink="'../assets/pdf_icon.png'">
 
       </download-cv-modal-component>
-    </modal-component>
+    </modal-component> -->
   </div>
 </template>
   
   <script>
   import ButtonComponent from '../components/ButtonComponent.vue'
-  import ModalComponent from '../components/ModalComponent.vue'
-  import DownloadCvModalComponent from '../components/DownloadCVModalComponent.vue';
   
   export default {
 
     components: {
-      ButtonComponent,
-      ModalComponent,
-      DownloadCvModalComponent
+      ButtonComponent
     },
 
     data() {
@@ -67,7 +63,7 @@
       },
 
       onDownloadClicked() {
-        window.open('https://fa-githubio.web.app/static/resume.pdf', '_blank');
+        window.open('/pdf/resume.pdf', '_blank');
       }
     }
   }
