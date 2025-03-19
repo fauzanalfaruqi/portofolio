@@ -42,6 +42,7 @@
                 </div>
 
                 <div class="rounded-lg p-0 lg:col-span-3 lg:p-12">
+                    <h2 class="text-[24px] text-my-header font-semibold mb-2">Send Message</h2>
                     <form @submit.prevent="handleSubmit" action="https://formspree.io/f/mjvnzavp"
                         method="POST">
                         <div>
