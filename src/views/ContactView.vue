@@ -43,8 +43,7 @@
 
                 <div class="rounded-lg p-0 lg:col-span-3 lg:p-12">
                     <h2 class="text-[24px] text-my-header font-semibold mb-2">Send Message</h2>
-                    <form @submit.prevent="handleSubmit" action="https://formspree.io/f/mjvnzavp"
-                        method="POST">
+                    <form @submit.prevent="handleSubmit" action="https://formspree.io/f/mjvnzavp" method="POST">
                         <div>
                             <label class="sr-only" for="name">Name</label>
                             <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Name" type="text"
@@ -60,7 +59,8 @@
 
                         <div class="mt-4">
                             <button type="submit" :disabled="sending"
-                                class="inline-block w-full rounded-lg px-5 py-3 font-medium text-white sm:w-auto" id="submit-button">
+                                class="inline-block w-full rounded-lg px-5 py-3 font-medium text-white sm:w-auto"
+                                id="submit-button">
                                 {{ sending ? 'Sending...' : 'Submit Message' }}
                             </button>
                         </div>
@@ -127,11 +127,11 @@ h2 {
 }
 
 .contact-link {
-  color: #3F94A7;
+    color: #3F94A7;
 }
 
 .contact-link:hover {
-  color: #2ab179;
+    color: #2ab179;
 }
 
 li {
@@ -153,12 +153,12 @@ li img {
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    gap: 27px;
+    gap: 12px;
 }
 
 .sm-logo-link {
     width: 28px;
-    height:28px;
+    height: 28px;
 }
 
 .sm-logo-link:hover {
