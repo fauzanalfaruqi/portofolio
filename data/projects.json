@@ -3,8 +3,8 @@
     "id": "p001",
     "name": "Web Template E-Commerce",
     "description": "The Web Template E Commerce App is a comprehensive full-stack application developed as the capstone project for Super Bootcamp Jawa Barat 2024. It integrates Go and MySQL on the backend with a frontend crafted using NextJS and styled with Tailwind CSS. The application is deployed on Vercel, ensuring seamless performance and scalability",
-    "image_link": "https://fa-portofolio.web.app/posters/wte-poster.png",
-    "thumbnail_link": "https://fa-portofolio.web.app/posters/wte-thumbnail-poster.png",
+    "image_link": "https://fa-githubio.web.app/static/posters/wte-poster.png",
+    "thumbnail_link": "https://fa-githubio.web.app/static/posters/wte-thumbnail-poster.png",
     "project_type": "Team project",
     "links": [
       {
@@ -74,8 +74,8 @@
     "id": "p002",
     "name": "Bike Review App",
     "description": "Bike Review is a full-stack web application developed as a React-based task during Superbootcamp Jawa Barat 2024. The backend is powered by Go and Supabase, while the frontend is crafted using ReactJS, with Tailwind CSS for styling and DaisyUI to accelerate the design process.",
-    "image_link": "https://fa-portofolio.web.app/posters/bikereview-poster.png",
-    "thumbnail_link": "https://fa-portofolio.web.app/posters/bikereview-thumbnail-poster.png",
+    "image_link": "https://fa-githubio.web.app/static/posters/bikereview-poster.png",
+    "thumbnail_link": "https://fa-githubio.web.app/static/posters/bikereview-thumbnail-poster.png",
     "project_type": "Individual project",
     "key_features": [
       {
@@ -143,7 +143,7 @@
     "id": "p003",
     "name": "E-Clinic",
     "description": "E-Clinic is a clinic management system API built using Go. This project was created during final project of the Go bootcamp at Enigmacamp. Implements clean architecture, the program can perform CRUD operations and Authorization using JWT.",
-    "image_link": "https://fa-portofolio.web.app/posters/avenger-clinic-poster.png",
+    "image_link": "https://fa-githubio.web.app/static/posters/avenger-clinic-poster.png",
     "project_type": "Team project",
     "links": [
       {
@@ -167,7 +167,7 @@
     "id": "p004",
     "name": "Portofolio Web App",
     "description": "The Portfolio Web App is a frontend application built with Vue.js, featuring client-side routing powered by Vue Router. It integrates with Formspree to handle messages from visitors. The app is hosted on Firebase for serving static files and deployed to GitHub Pages.",
-    "image_link": "https://fa-portofolio.web.app/posters/portofolio-poster.png",
+    "image_link": "https://fa-githubio.web.app/static/posters/portofolio-poster.png",
     "project_type": "Individual project",
     "links": [
       {
@@ -192,7 +192,7 @@
     "id": "p005",
     "name": "Moonwalker",
     "description": "Moonwalker is 2D platformer infinite runner game built using Unity Engine. This game was created during Pizza Jam submission on Itch.io",
-    "image_link": "https://fa-portofolio.web.app/posters/moonwalker-poster.png",
+    "image_link": "https://fa-githubio.web.app/static/posters/moonwalker-poster.png",
     "project_type": "Individual project",
     "links": [
       {
@@ -217,7 +217,7 @@
     "id": "p006",
     "name": "Pie In The Sky",
     "description": "Pie In The Sky is a 2D casual game made with Unity. This game is based on coding challenge made by Daniel Shiffman from The Coding Train. Challenge link: https://thecodingtrain.com/challenges/169-pi-in-the-sky",
-    "image_link": "https://fa-portofolio.web.app/posters/piinthesky-poster.png",
+    "image_link": "https://fa-githubio.web.app/static/posters/piinthesky-poster.png",
     "project_type": "Individual project",
     "links": [
       {
@@ -248,7 +248,7 @@
         "deploy": "https://apkpure.com/a-game-for-you-to-feel-bored/com.MorbagStudio.ThrowBoll/"
       }
     ],
-    "image_link": "https://fa-portofolio.web.app/posters/throwball-poster.png",
+    "image_link": "https://fa-githubio.web.app/static/posters/throwball-poster.png",
     "project_tag": [
       {
         "id": "pt001",
@@ -277,7 +277,7 @@
         "deploy": "https://apkpure.com/tetorisu-block-puzzle-game/com.MorbagStudio.NewTetorisu"
       }
     ],
-    "image_link": "https://fa-portofolio.web.app/posters/tetorisu-poster.png",
+    "image_link": "https://fa-githubio.web.app/static/posters/tetorisu-poster.png",
     "project_tag": [
       {
         "id": "pt001",
@@ -300,7 +300,7 @@
     "id": "p009",
     "name": "Night Fishing",
     "description": "Night Fishing is a 2D idle fishing game made with the Unity Engine. It utilizes the Unity Universal Render Pipeline to implement night visual effects and lighting.",
-    "image_link": "https://fa-portofolio.web.app/posters/night-fishing-poster.png",
+    "image_link": "https://fa-githubio.web.app/static/posters/night-fishing-poster.png",
     "project_type": "Individual project",
     "links": [
       {
