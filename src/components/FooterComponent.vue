@@ -3,7 +3,7 @@
         <hr>
         <div class="footer-container">
             <p>
-                © 2024 M. Fauzan Al-Faruqi
+                © 2025 M. Fauzan Al-Faruqi
             </p>
         </div>
     </div>
