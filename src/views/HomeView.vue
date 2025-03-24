@@ -1,5 +1,6 @@
 <template>
-  <div class="relative flex flex-col-reverse items-center max-w-screen-xl px-4 mx-auto md:flex-row sm:px-6 p-8 h-[85vh] 2xl:h-[87.5vh]">
+  <div
+    class="relative flex flex-col-reverse items-center max-w-screen-xl px-4 mx-auto md:flex-row sm:px-6 p-8 2xl:h-[87.5vh] sm:h-[100vh]">
     <div class="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pr-10">
       <div class="text-center md:text-left">
         <h1 class="font-bold text-my-header text-[32px] text-left">M. Fauzan Al-Faruqi</h1>
@@ -37,45 +38,43 @@
     </modal-component> -->
   </div>
 </template>
-  
-  <script>
-  import ButtonComponent from '../components/ButtonComponent.vue'
-  
-  export default {
 
-    components: {
-      ButtonComponent
+<script>
+import ButtonComponent from '../components/ButtonComponent.vue'
+
+export default {
+
+  components: {
+    ButtonComponent
+  },
+
+  data() {
+    return {
+      modalIsOpen: false
+    };
+  },
+
+  methods: {
+    showModal() {
+      this.modalIsOpen = true;
     },
 
-    data() {
-      return {
-        modalIsOpen:false
-      };
+    closeModal() {
+      this.modalIsOpen = false;
     },
 
-    methods: {
-      showModal() {
-        this.modalIsOpen = true;
-      },
-
-      closeModal() {
-        this.modalIsOpen = false;
-      },
-
-      onDownloadClicked() {
-        window.open('/pdf/resume.pdf', '_blank');
-      }
+    onDownloadClicked() {
+      window.open('/pdf/resume.pdf', '_blank');
     }
   }
-  </script>
-  
-  <style scoped>
-  .home-content {
-    display: flex;
-    flex: 1;
-    padding: 40px 20px;
-    margin: 20px 150px;
-  }
+}
+</script>
 
-  </style>
-  
+<style scoped>
+.home-content {
+  display: flex;
+  flex: 1;
+  padding: 40px 20px;
+  margin: 20px 150px;
+}
+</style>
