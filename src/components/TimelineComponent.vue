@@ -1,7 +1,7 @@
 <template>
-    <div class="relative flex items-center">
+    <div class="relative flex items-center mb-5">
         <!-- Card container -->
-        <div class="bg-white border-2 border-[#3F94A7] rounded-lg p-4 w-full md:ml-24 mb-5">
+        <div class="bg-white border-2 border-[#3F94A7] rounded-lg p-4 w-full md:ml-24">
             <!-- Info section -->
             <div class="flex flex-col gap-2">
                 <!-- Title and Tag container -->
