@@ -1,21 +1,24 @@
 <template>
-    <div class="timeline">
-        <div class="outer">
-            <div class="card">
-                <div class="info">
-                    <div class="card-title-container">
-                        <h3 class="title">{{ institution }}</h3>
-                        <h3 class="card-tag">{{ timelineTag }}</h3>
-                    </div>
-                    <hr>
-                    <p class="year">{{ year }}</p>
-                    <slot></slot>
+    <div class="relative flex items-center">
+        <!-- Card container -->
+        <div class="bg-white border-2 border-[#3F94A7] rounded-lg p-4 w-full md:ml-24 mb-5">
+            <!-- Info section -->
+            <div class="flex flex-col gap-2">
+                <!-- Title and Tag container -->
+                <div class="flex flex-col md:flex-row justify-between md:items-center">
+                    <h3 id="title" class="font-semibold text-[#5A5A5A]">{{
+                        institution
+                        }}</h3>
+                    <span class="text-white text-sm bg-[#3F94A7] py-1 px-4 rounded-md">{{ timelineTag }}</span>
                 </div>
+                <hr class="border-[#3F94A7] mb-2" />
+                <p class="text-sm text-[#5A5A5A] italic">{{ year }}</p>
+                <!-- Slot for additional content -->
+                <slot></slot>
             </div>
         </div>
     </div>
 </template>
-
 <script>
 export default {
     props: {
@@ -27,84 +30,17 @@ export default {
 </script>
 
 <style scoped>
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-}
-
-/* Outer Layer with the timeline border */
-/* .outer {
-  border-left: 2px solid #3F94A7;
-} */
-
-/* Card container */
-.card {
-    border: solid 2px #3F94A7;
-    position: relative;
-    margin: 0 0 20px 100px;
-    padding: 10px;
-    background: #ffffff;
-    border-radius: 8px;
-    /* max-width: 800px; */
-}
-
-/* Information about the timeline */
-.info {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 5px;
-}
-
-.info slot {
-    font-size: 14px;
-    font-weight: 400;
-}
-
-/* Title of the card */
-.title {
-    font-weight: 600;
-    color: #5A5A5A;
-    position: relative;
-}
-
-.year {
-    font-weight: 400;
-    font-style: italic;
-    color: #5A5A5A;
-    font-size: 14px;
-}
-
-.card-title-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.card-tag {
-    font-weight: 400;
-    font-size: 14px;
-    color: #ffffff;
-    background-color: #3F94A7;
-    padding: 5px 15px;
-    text-align: center;
-    min-width: 50px;
-}
-
 /* Timeline dot  */
-.title::before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background: white;
-    border-radius: 999px;
-    left: -127px;
-    border: 3px solid #3F94A7;
+@media (min-width: 768px) {
+    #title::before {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background: white;
+        border-radius: 999px;
+        left: -10px;
+        border: 2px solid #3F94A7;
+    }
 }
 </style>
