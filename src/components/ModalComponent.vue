@@ -4,7 +4,7 @@
     <div
       class="bg-white rounded-lg shadow-xl relative overflow-auto max-h-[80vh] w-full xl:max-w-4xl md:max-w-2xl sm:max-w-lg">
       <button @click="closeModal"
-        class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold focus:outline-none">
+        class="absolute top-2 right-2 text-gray-500 hover:text-[#3F94A7] text-2xl font-bold focus:outline-none">
         &times;
       </button>
       <slot></slot>
