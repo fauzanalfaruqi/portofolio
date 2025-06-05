@@ -1,5 +1,74 @@
 [
   {
+    "id": "p00x",
+    "name": "Buku Saku PMR",
+    "description": "Buku Saku PMR is a lightweight Progressive Web App (PWA) built using Hugo and the Hextra theme. It serves as a digital pocketbook for Youth Red Cross (PMR) education, including key topics like 7 Fundamental Principles, PMI history, Jumbara, and more. The app is packaged as a Trusted Web Activity (TWA) for Android using Bubblewrap, deployed on Cloudflare Pages, and integrated with Google AdSense for monetization.",
+    "image_link": "buku-saku-thumbnail-poster.png",
+    "thumbnail_link": "buku-saku-thumbnail-poster.png",
+    "project_type": "Individual project",
+    "key_features": [
+      {
+        "id": "kf001",
+        "description": "Built using Hugo (static site generator) with the Hextra theme module for clean, responsive UI and markdown-based content."
+      },
+      {
+        "id": "kf002",
+        "description": "Fully packaged as an installable Android app via Trusted Web Activity (TWA) using Bubblewrap CLI and Play Store-compliant configuration."
+      },
+      {
+        "id": "kf003",
+        "description": "Hosted on Cloudflare Pages with custom configuration for SEO and asset caching."
+      },
+      {
+        "id": "kf005",
+        "description": "Supports flexible dark/light theming using CSS variables and `prefers-color-scheme` media queries, customizable at runtime."
+      },
+      {
+        "id": "kf006",
+        "description": "Integrated Google AdSense manually via head injection for monetization, with consideration for PWA and TWA environments."
+      },
+      {
+        "id": "kf007",
+        "description": "Configured build pipeline using `hugo --gc --minify` for optimized static output with fingerprinting and hashed assets."
+      },
+      {
+        "id": "kf008",
+        "description": "Enables dynamic search using FlexSearch with custom indexing configuration to support multilingual tokenization."
+      },
+      {
+        "id": "kf009",
+        "description": "PWA manifest and TWA metadata configured for Play Store submission, including splash screens, deep link support, and site verification."
+      }
+    ],
+    "links": [
+      {
+        "deploy": "https://efastudio.itch.io/buku-saku-pmr"
+      }
+    ],
+    "project_tag": [
+      {
+        "id": "pt001",
+        "tag_name": "Hugo",
+        "tag_color": "#FF4088"
+      },
+      {
+        "id": "pt002",
+        "tag_name": "Bubblewrap / TWA",
+        "tag_color": "#4285F4"
+      },
+      {
+        "id": "pt003",
+        "tag_name": "AdSense",
+        "tag_color": "#FABB05"
+      },
+      {
+        "id": "pt004",
+        "tag_name": "Cloudflare Pages",
+        "tag_color": "#F38020"
+      }
+    ]
+  },
+  {
     "id": "p001",
     "name": "Web Template E-Commerce",
     "description": "The Web Template E Commerce App is a comprehensive full-stack application developed as the capstone project for Super Bootcamp Jawa Barat 2024. It integrates Go and MySQL on the backend with a frontend crafted using NextJS and styled with Tailwind CSS. The application is deployed on Vercel, ensuring seamless performance and scalability",
